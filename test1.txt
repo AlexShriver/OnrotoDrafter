@@ -1,0 +1,188 @@
+Shohei Ohtani-Hitter      DH OF      541   89    28    99    25    0.266    $$ 41   
+Marcus Semien             DH 2B      591   99    21    61    27    0.254    $$ 34   
+Mike Trout                DH OF      505   96    31    74    6     0.269    $$ 31   
+Nate Lowe                 1B DH      550   78    23    87    7     0.289    $$ 31   
+Esteury Ruiz              DH OF      427   40    10    32    52    0.246    $$ 29   
+Masataka Yoshida          DH OF      491   66    14    89    7     0.322    $$ 29   
+Daulton Varsho            C DH OF    491   66    21    73    19    0.263    $$ 29   
+George Springer           DH OF      527   92    21    64    14    0.256    $$ 28   
+Alex Verdugo              DH OF      528   70    13    77    10    0.305    $$ 28   
+Alex Bregman              DH 3B      524   84    19    92    6     0.26     $$ 26   
+Jorge Polanco             DH 2B      488   71    18    79    13    0.258    $$ 25   IL
+Harrison Bader            DH OF      489   57    14    57    28    0.249    $$ 25   IL
+Javier Baez               DH SS      554   68    18    74    21    0.236    $$ 25   
+Josh Naylor               1B DH      493   64    18    81    7     0.278    $$ 24   
+Brandon Lowe              DH 2B      509   68    19    87    10    0.25     $$ 24   
+Josh Bell                 1B DH      513   71    18    90    3     0.267    $$ 23   
+Whit Merrifield           DH 2B OF   473   60    8     50    27    0.256    $$ 22   
+Kolten Wong               DH 2B      464   75    11    42    20    0.265    $$ 22   
+Jose Abreu                1B DH      533   73    18    87    1     0.265    $$ 22   
+Hunter Renfroe            DH OF      489   67    22    81    4     0.243    $$ 20   
+Ramon Laureano            DH OF      478   61    16    46    25    0.222    $$ 20   
+Austin Hays               DH OF      516   60    16    65    9     0.254    $$ 19   
+Jeremy Pena               DH SS      516   58    17    56    15    0.238    $$ 19   
+Jose Altuve               DH 2B      365   69    13    37    12    0.274    $$ 18   IL
+Justin Turner             DH 3B      465   68    13    69    5     0.262    $$ 18   
+Yoan Moncada              DH 3B      512   63    15    75    7     0.246    $$ 18   
+Adalberto Mondesi         DH SS      282   28    7     24    38    0.227    $$ 18   IL
+Giancarlo Stanton         DH OF      481   62    24    84    1     0.225    $$ 17   
+Brandon Drury             1B DH 2B 3B493   61    17    65    5     0.245    $$ 16   
+Tony Kemp                 DH 2B OF   451   65    6     34    16    0.266    $$ 16   
+Michael Brantley          DH OF      431   58    8     52    5     0.295    $$ 16   IL
+Anthony Rendon            DH 3B      448   57    12    74    4     0.252    $$ 15   
+Max Kepler                DH OF      422   54    13    67    9     0.237    $$ 15   
+Austin Meadows            DH OF      443   55    13    65    6     0.251    $$ 15   
+Alex Kirilloff            DH OF      389   46    15    44    5     0.28     $$ 14   IL
+Manuel Margot             DH OF      427   45    7     45    17    0.248    $$ 14   
+D.J. LeMahieu             1B DH 2B 3B422   57    9     55    5     0.268    $$ 14   
+Joey Gallo                1B DH OF   454   58    24    59    7     0.198    $$ 13   
+Edward Olivares           DH OF      359   40    11    38    13    0.259    $$ 13   
+Jesus Aguilar             1B DH      455   52    16    68    1     0.242    $$ 13   
+J.P. Crawford             DH SS      535   49    8     38    10    0.265    $$ 13   
+Jarred Kelenic            DH OF      395   43    12    43    15    0.228    $$ 12   
+Nicky Lopez               DH 2B SS 3B359   38    2     33    19    0.267    $$ 12   
+Santiago Espinal          DH 2B      410   44    7     37    11    0.271    $$ 12   
+Adam Frazier              DH 2B OF   449   43    4     35    11    0.276    $$ 11   
+Jonathan Schoop           DH 2B      486   52    12    57    6     0.235    $$ 11   
+Josh Lowe                 DH OF      301   34    8     35    16    0.246    $$ 11   
+Kike Hernandez            DH SS OF   485   59    13    59    3     0.231    $$ 11   
+Jace Peterson             DH 3B      350   39    8     43    13    0.243    $$ 11   
+Trevor Story              DH 2B      242   32    9     30    16    0.248    $$ 11   IL
+Drew Waters               DH OF      351   33    10    26    19    0.231    $$ 10   IL
+Jared Walsh               1B DH      364   42    15    46    3     0.253    $$ 10   IL
+Brandon Belt              1B DH      331   45    13    55    2     0.248    $$ 10   
+Hunter Dozier             1B DH 3B OF421   48    11    52    6     0.23     $$ 9    
+Oswaldo Cabrera           DH OF      297   36    10    34    12    0.239    $$ 9    
+A.J. Pollock              DH OF      365   39    11    39    7     0.247    $$ 9    
+Kevin Kiermaier           DH OF      364   36    7     29    14    0.245    $$ 9    
+Adam Duvall               DH OF      369   45    16    52    4     0.214    $$ 9    
+Bubba Thompson            DH OF      217   23    4     23    22    0.235    $$ 9    
+Will Brennan              DH OF      284   35    4     30    13    0.264    $$ 9    
+Kyle Stowers              DH OF      359   39    12    43    7     0.234    $$ 8    
+Josh Donaldson            DH 3B      385   48    13    58    1     0.226    $$ 8    
+Gavin Sheets              DH OF      304   35    12    39    3     0.26     $$ 8    
+Nick Gordon               DH 2B OF   249   31    5     28    12    0.265    $$ 8    
+Aaron Hicks               DH OF      376   41    9     39    10    0.223    $$ 7    
+Matt Vierling             DH OF      295   29    6     26    14    0.244    $$ 7    
+Michael Taylor            DH OF      314   43    6     29    10    0.229    $$ 6    
+Yasmani Grandal           C DH       341   37    13    40    1     0.24     $$ 6    
+Mauricio Dubon            DH SS OF   308   38    6     27    8     0.25     $$ 6    
+Royce Lewis               DH SS      185   23    5     21    12    0.254    $$ 5    IL
+Nate Eaton                DH OF      237   22    4     20    17    0.224    $$ 5    
+Nick Maton                DH OF      349   35    7     37    6     0.232    $$ 5    
+Trevor Larnach            DH OF      299   34    9     37    3     0.237    $$ 4    
+Mitch Garver              C DH       319   37    13    39    1     0.219    $$ 4    
+Brad Miller               DH 3B OF   324   37    11    35    4     0.216    $$ 4    
+David Fletcher            DH 2B SS   311   28    3     24    8     0.26     $$ 4    
+Christian Vazquez         C DH       363   32    7     28    4     0.248    $$ 3    
+Logan O'Hoppe             C DH       267   30    9     27    3     0.236    $$ 3    
+Taylor Walls              DH 2B SS 3B211   26    4     24    10    0.218    $$ 2    
+Ryan Noda                 1B DH      261   31    9     37    4     0.203    $$ 2    
+Conner Capel              DH OF      236   24    6     21    8     0.233    $$ 2    
+Sam Haggerty              DH OF      139   17    3     15    12    0.245    $$ 2    
+Francisco Mejia           C DH       305   29    7     27    1     0.249    $$ 2    
+Kyle Farmer               DH SS 3B   217   27    4     27    3     0.249    $$ 1    
+Isiah Kiner-Falefa        DH SS      154   17    2     13    10    0.26     $$ 1    
+David Hensley             DH         213   27    4     21    7     0.225    $$ 1    
+Ryan Kreidler             DH SS 3B   203   20    6     19    10    0.202    $$ 1    
+Jake Meyers               DH OF      207   22    5     20    7     0.227    $$ 1    
+Franmil Reyes             DH OF      185   26    7     22    2     0.238    $$ 1    
+Romy Gonzalez             DH 2B      185   21    6     19    7     0.216    $$ 0    
+Christian Bethancourt     1B C DH    245   22    6     21    5     0.224    $$ 0    
+Raimel Tapia              DH OF      127   15    2     16    6     0.276    $$ 0    
+Luke Raley                DH OF      152   22    6     18    3     0.237    $$ 0    
+Gabriel Arias             DH 3B      177   22    5     22    4     0.226    $$ 0    
+Brent Rooker              DH OF      203   24    9     24    2     0.202    $$ 1    
+Brett Phillips            DH OF      121   19    4     16    7     0.198    $$ 1    
+James McCann              C DH       220   27    5     22    2     0.218    $$ 1    IL
+Zach McKinstry            DH 2B 3B   148   15    4     16    4     0.243    $$ 1    
+Tommy La                  Sea DH 3B  183   19    3     19    1     0.257    $$ 1    
+Estevan Florial           DH OF      93    12    3     10    6     0.237    $$ 1    
+Kyle Higashioka           C DH       214   21    8     20    0     0.215    $$ 1    
+Ryan McKenna              DH OF      120   15    3     14    4     0.233    $$ 1    
+Seby Zavala               C DH       210   22    7     23    0     0.21     $$ 1    
+Yainer Diaz               DH         184   18    5     17    1     0.234    $$ 1    
+Donovan Solano            1B DH      122   13    3     13    1     0.279    $$ 1    
+Tom Murphy                C DH       208   23    6     23    0     0.202    $$ 1    
+Max Stassi                C DH       237   24    7     22    0     0.198    $$ 1    IL
+Connor Wong               C DH       154   15    4     14    2     0.227    $$ 1    
+Matt Duffy                1B DH 3B   150   15    2     16    2     0.24     $$ 1    
+Franchy Cordero           1B DH OF   91    12    3     13    2     0.242    $$ 1    
+Taylor Trammell           DH OF      90    12    3     12    3     0.222    $$ 1    IL
+Tyler Nevin               DH 3B      116   11    3     11    2     0.224    $$ 1    IL
+Cesar Salazar             C DH       121   12    3     10    2     0.223    $$ 1    
+Corey Julks               DH OF      94    12    2     11    3     0.202    $$ 1    
+Rob Refsnyder             DH OF      61    9     2     10    1     0.262    $$ 1    
+Cooper Hummel             DH OF      89    10    2     11    2     0.225    $$ 1    
+Nathan Lukes              DH OF      65    10    1     6     2     0.262    $$ 1    
+Yu-Cheng Chang            DH 2B      96    15    2     9     1     0.219    $$ 1    
+Matt Thaiss               C DH       90    9     2     8     1     0.233    $$ 1    
+Hanser Alberto            DH 2B 3B   93    8     1     7     1     0.258    $$ 1    
+Gilberto Celestino        DH OF      63    9     1     5     2     0.222    $$ 1    IL
+Manny Pina                C DH       145   14    4     14    0     0.186    $$ 1    IL
+Travis Jankowski          DH OF      30    4     0     4     3     0.233    $$ 1    
+Jackie Bradley            DH OF      88    7     1     6     2     0.205    $$ 1    
+Willi Castro              DH OF      32    4     1     4     1     0.25     $$ 1    
+Meibrys Viloria           C DH       59    6     2     5     0     0.22     $$ 1    
+Carlos E.                 Oak C DH   60    6     2     6     0     0.2      $$ 1    
+Jake Lamb                 DH OF      30    3     1     3     0     0.233    $$ 1    
+Anthony Bemboom           C DH       31    4     1     3     0     0.194    $$ 1    
+Ben Rortvedt              C          30    3     1     3     0     0.2      $$ 1    IL
+Cam Gallagher             C DH       31    3     1     2     0     0.194    $$ 1    
+Johan Camargo             DH SS      61    7     1     8     0     0.262    $$ 1    
+Ronaldo Hernandez         C          31    3     1     3     0     0.226    $$ 1    
+Evan White                1B         93    11    3     12    1     0.183    $$ 1    
+Victor Reyes              DH OF      95    12    2     9     3     0.263    $$ 1    
+Enmanuel Valdez           3B         30    3     1     3     1     0.233    $$ 1    
+Tyler Wade                DH 2B      30    4     0     2     3     0.233    $$ 1    
+Jonah Bride               DH 2B 3B   60    8     1     5     1     0.233    $$ 1    
+Jose Rodriguez            SS         33    5     1     3     2     0.242    $$ 1    
+Joey Ortiz                SS         93    11    2     11    2     0.237    $$ 1    
+Lenyn Sosa                DH 2B      96    13    2     8     1     0.24     $$ 1    
+Yohel Pozo                C          31    3     1     3     0     0.258    $$ 1    
+Zack Gelof                SS         60    6     1     7     2     0.2      $$ 1    
+Yoshitomo Tsutsugo        1B DH      24    3     1     3     0     0.208    $$ 1    
+Mickey Moniak             DH OF      97    14    3     10    3     0.227    $$ 1    
+Wilyer Abreu              OF         30    4     1     4     2     0.233    $$ 1    
+Samad Taylor              2B         59    6     1     5     5     0.22     $$ 1    
+Richie Palacios           DH OF      62    9     1     7     4     0.242    $$ 1    
+Michael Stefanic          DH 2B      30    3     0     3     1     0.267    $$ 1    
+George Valera             OF         90    10    3     10    2     0.233    $$ 1    
+Addison Barger            SS         74    8     2     7     1     0.23     $$ 1    
+Parker Meadows            OF         123   13    3     14    4     0.22     $$ 1    
+Donny Sands               C DH       89    9     3     9     0     0.236    $$ 1    
+J.J. Bleday               DH OF      199   19    6     18    3     0.206    $$ 1    
+Andrew Velazquez          DH SS      62    7     1     7     5     0.226    $$ 1    
+Jo Adell                  DH OF      95    14    3     11    3     0.221    $$ 1    
+Lewin Diaz                1B DH      31    4     1     4     0     0.226    $$ 1    
+Sam Huff                  C DH       31    4     1     4     0     0.194    $$ 1    
+Matt Wallner              DH OF      61    8     2     10    1     0.213    $$ 1    
+Micah Pries               1B         31    3     1     3     1     0.226    $$ 1    
+Ceddanne Rafaela          3B         32    4     1     4     2     0.25     $$ 1    
+Tyler Freeman             DH 3B      93    12    1     12    3     0.258    $$ 1    
+Zack Short                DH SS      29    3     1     4     1     0.207    $$ 1    
+Spencer Horwitz           1B         31    4     1     4     0     0.258    $$ 1    
+Jordan Westburg           SS         59    6     2     5     2     0.22     $$ 1    
+Ben Gamel                 DH OF      148   16    4     16    3     0.243    $$ 1    
+Edouard Julien            2B         30    4     1     4     1     0.233    $$ 1    
+J.J. Matijevic            DH         30    4     1     4     1     0.233    $$ 1    
+Ryan O'Hearn              DH         92    10    3     12    1     0.228    $$ 1    
+Justin Dirden             OF         30    3     1     3     1     0.233    $$ 1    
+Billy Hamilton            DH OF      32    4     0     3     3     0.219    $$ 1    
+Rene Pinto                C DH       61    6     2     6     0     0.213    $$ 1    
+Carlos Perez              C DH       62    6     1     6     0     0.226    $$ 1    
+Jorge Alfaro              C DH       123   12    3     12    1     0.236    $$ 1    
+Rob Brantly               C DH       31    3     0     3     0     0.226    $$ 1    
+David Hamilton            SS         62    6     1     6     7     0.226    $$ 1    
+Cade Marlowe              OF         30    3     1     3     2     0.2      $$ 1    
+Andy Ibanez               DH 3B      31    4     0     3     1     0.226    $$ 1    
+Jake Burger               DH 3B      123   15    4     18    0     0.228    $$ 1    
+Akil Baddoo               DH OF      228   21    5     16    15    0.25     $$ 5    
+Nick Solak                DH OF      123   18    3     11    4     0.244    $$ 1    
+Colton Cowser             OF         89    11    2     9     3     0.236    $$ 1    
+Tony Wolters              C DH 2B    30    2     0     2     0     0.2      $$ 1    
+Nick Pratto               1B DH      177   23    7     29    3     0.215    $$ 0    
+Jordan Diaz               DH 2B      62    6     2     8     0     0.242    $$ 1    
+Bo Naylor                 C DH       179   19    5     17    5     0.212    $$ 1    
+Freddy Fermin             C DH       62    7     1     8     0     0.21     $$ 1    
+Vidal Brujan              DH 2B OF   92    10    1     10    8     0.228    $$ 1    

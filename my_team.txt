@@ -1,0 +1,19 @@
+SHEA LANGELIERS    C1  C DH         417    41   13   43    2   0.213    7.00
+JOSE TREVINO       C2  C DH         372    35    9   33    2   0.239    2.00
+TY FRANCE          1B  1B DH        539    74   17   80    1   0.273    13.00
+GIOVANNY URSHELA   3B  DH 3B        429    46   11   48    4   0.266    6.00
+GUNNAR HENDERSON   CI  DH 3B        499    58   13   53   20   0.240    7.00
+MICHAEL MASSEY     2B  DH 2B        360    35    9   32   10   0.247    1.00
+BOBBY WITT         SS  DH SS 3B     568    92   18   56   43   0.248    30.00
+WANDER FRANCO      MI  DH SS        535    83   12   62   19   0.290    25.00
+DYLAN MOORE        OF1 DH SS OF     236    36    7   27   24   0.220    1.00 (D) 
+EUGENIO SUAREZ     DH  DH 3B        530    67   23   77    1   0.215    16.00
+HARRY FORD	   B   C DH         0	 0	 0	0    0   0.0      0.0 (I)
+
+Pitchers
+
+FRAMBER VALDEZ    SP  187    12   3.273   1.187  166    0   16.00
+AARON CIVALE      SP  139     8   3.755   1.158  120    0   6.00 
+JAMES PAXTON      SP  113     7   3.425   1.168  120    0   3.00  (D)
+COREY KLUBER      SP  135     7   4.267   1.237  111    0   7.00
+GRAYSON RODRIGUEZ SP  98      6   3.306   1.153  106    0   12.00 (I)
