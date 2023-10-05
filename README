@@ -1,0 +1,71 @@
+Alex Shriver
+
+********************************************************************************
+********************************************************************************
+**********                                                            **********
+**********                      Onroto_Drafter                        **********
+**********                                                            **********
+********************************************************************************
+*****
+*****      My name is Alex Shriver and I love fantasy sports. Lucky for me,
+*****      my dad does too. He's been in an iconic league founded in our
+*****      small town of Brattleboro, Vermont for years. The league is 
+*****      called the Green Mountain Rotisserie League, and has been active
+*****      since the 90s. In its many years of operation, the rules of the
+*****      league have evolved from a simple keeper rotisserie league to a
+*****      highly intricate and unique fantasy experience. As such, by the 
+*****      time my dad invited me to the league, there were so many special 
+*****      rules that no online fantasy baseball drafting website could 
+*****      effectively support our auction draft format, despite the website
+*****      onroto.com effectively running the show during the season.
+*****
+*****      After two years in the league, I was already sick of drafting by
+*****      hand, being forced to scratch off names from paper lists as they 
+*****      were drafted, having little indication of how to evaluate the 
+*****      remaining players. So, a few days before 2023 season's draft, 
+*****      I came up with the idea to write a program to do it for me! That 
+*****      week, I didn't sleep much as I worked tirelessly to finish this 
+*****      program before the draft started whilst keeping up with my classes.
+*****
+*****      I finished just in time, pulling an all-nighter before the draft.
+*****      I put the final touches on my favorite personal project just an 
+*****      hour before the first pick. 
+*****
+*****      Today is a warm October Thursday, and I am writing about this 
+*****      story after successfully utilizing the program to draft my best
+*****      team ever. In fact, it was so good that I won the league!
+*****
+*****      Now, before the 2024 draft starts, I hope to clean this program up,
+*****      expand its capabilities to support a multi-team draft, and per-
+*****      haps even build a website around it so the whole league can use
+*****      it--even though that would take away my advantage!
+*****
+********************************************************************************
+
+
+----- ARCHITECTURE ------ 
+batter_database: This class handles storing the available batters
+                 and all the operations to manipulate the database
+
+pitcher_database: This class handles storing the available pitchers
+                 and all the operations to manipulate the database
+
+batter: This class handles representing individual batters and manipulating
+        information about them
+
+pitcher: This class handles representing individual pitchers and manipulating
+         information about them
+
+draft: The driver file that contains the main function for executing the
+       drafter program
+
+
+
+----- COMPILATION ------
+To compile the drafter, run Make OnRoto_Drafter
+
+----- POTENTIAL IMPROVEMENTS ------
+    - Handle TODOs
+    - Generally use more exceptions
+    - Think about using more inheritance. For instance, could batters and 
+      pitchers inherit from a player superclass? Could I combine the two databases?
