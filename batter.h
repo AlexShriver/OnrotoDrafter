@@ -1,3 +1,13 @@
+/**************************************************************
+ *                     batter.h
+ *     Author: Alex Shriver
+ *   
+ *     Declaration of the class defined in batter.cpp. This is 
+ *     a class to represent a batter and information about their
+ *     projected season.
+ *     
+ **************************************************************/
+
 #ifndef _BATTER_H_
 #define _BATTER_H_
 
@@ -37,7 +47,7 @@ private:
 
         // Member variables
         string name;
-        string eligibility;  // maybe just make this a string...
+        string eligibility; 
         // stats
         int at_bats;
         int runs;

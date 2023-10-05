@@ -1,3 +1,19 @@
+/**************************************************************
+ *                     interact.cpp
+ *     Author: Alex Shriver
+ *   
+ *     This file defines functions declared in interact.h. 
+ *     These functions are used in the OnRoto_Drafter program to 
+ *     allow user interaction with their team and the databases
+ *     of available players.
+ * 
+ *     Full disclosure, I wrote this file at 3 am just hours before
+ *     the start of the draft.
+ * 
+ *     TODO: Clean up this file
+ *     
+ **************************************************************/
+
 #include <iostream>
 #include <fstream>
 #include <istream>
@@ -6,10 +22,23 @@
 
 using namespace std;
 
+/**********query_loop********
+ * Runs a query loop which allows an OnRoto_Drafter user to interact with 
+ * available players and their team
+ * Inputs:
+ *      batter_database *avail_batters: a full database of available hitters
+ *      pitcher_database *avail_pitchers: a full database of available pitchers
+ *      team *my_team: the user's team
+ * Return: n/a
+ * Expects: nonnull databases and team
+ ************************/
 void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team)
 {
+        // TODO: Assert arguments are nonnull
         string command = "", sure;
-        while (command != "quit" and command != "q") 
+
+        // This is the general loop which will end when the command is to quit
+        while (command != "quit" and command[0] != "q") 
         {
                 cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
@@ -26,12 +55,15 @@ void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                 cout << "query ---- ";
                 cin >> command;
                 if (command == "d") {
+                        // draft a player
                         draft_loop(avail_batters, avail_pitchers, my_team);
                 } else if (command == "a") {
+                        // print all the available players
                         print(avail_batters, avail_pitchers);
                 } else if (command == "t") {
+                        // manipulate the team
                         manip_team(my_team);
-                } else if (command == "quit" or command == "q") {
+                } else if (command == "quit" or command[0] == "q") {
                         cout << "\n\nARE YOU SURE??? YOU WILL LOSE ALL PROGRESS: [y/n] ";
                         cin >> sure;
                         if (sure != "y") {
@@ -43,36 +75,25 @@ void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
         }
 }
 
-// void draft(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team) 
-// {
-//         string file;
-//         cout << "Would you like to draft from a file? [y/n] ";
-//         cin >> file;
-//         if (file == "y") {
-//                 ifstream stream;
-//                 cout << "Give me a filename: ";
-//                 cin >> file;
-//                 while (not open_up(stream, file) and file != "n" and file != "quit") {
-//                         cout << "Would you like to try another file? [filename/n] ";
-//                         cin >> file;
-//                 }
-//                 if (file != "n") {
-//                         draft_file(stream, avail_batters, avail_pitchers, my_team);
-//                 } else if (file == "quit") {
-//                         return;
-//                 }
-//         } else {
-//                 draft_loop(avail_batters, avail_pitchers, my_team);
-//         }
-// }
-
+/**********draft_loop********
+ * Runs a query loop giving the user the ability to draft a player to their
+ *      team or another team
+ * Inputs:
+ *      batter_database *avail_batters: a full database of available hitters
+ *      pitcher_database *avail_pitchers: a full database of available pitchers
+ *      team *my_team: the user's team
+ * Return: n/a
+ * Expects: nonnull databases and team
+ ************************/
 void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team)
 {
+        // TODO: Assert nonnull arguments
         string hit_pit, draft, pos, first, last, name = "";
         int price;
         batter hitter;
         pitcher hurler;
 
+        // while loop to continue drafting unless the user asks to quit
         while (name[0] != 'q') {
                 cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
@@ -90,6 +111,8 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                 cout << "Is a pitcher or hitter being drafted? [p/h] ";
                 cin >> hit_pit;
 
+                // Removes the player
+                // TODO: Implement different behavior if the player doesn't exist
                 if (hit_pit == "p") {
                         hurler = avail_pitchers->get_player(name);
                         if (hurler.is_player()) {
@@ -108,10 +131,10 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                 cout << "Did you draft this player? [y/n] ";
                 cin >> draft;
 
-                if (draft == "y") {
+                if (draft == "y") {         // add the player to the user's team
                         cout << "How much did you spend? ";
                         cin >> price;
-                        if (hit_pit == "h") {
+                        if (hit_pit == "h") {  // determine where to play hitter
                                 hitter.set_value(price);
                                 cout << "What position will he play? Here are your current hitters:\n";
                                 my_team->print_hitters();
@@ -121,11 +144,11 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                                 cout << "position: ";
                                 cin >> pos;
                                 my_team->add_new_batter(hitter, pos);
-                        } else {
+                        } else {        // determine how to add pitcher to team
                                 hurler.set_value(price);
                                 cout << "Is your pitcher a starter or reliever? [r/s] ";
                                 cin >> pos;
-                                if (pos == "r") {
+                                if (pos == "r" || pos[0] == "r" || pos[0] == "R") {
                                         hurler.set_starter(false);
                                 }
                                 my_team->add_new_pitcher(hurler);
@@ -136,7 +159,7 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                                 if (pos == "y") {
                                         cout << "Tell me where to put him [b/s] ";
                                         cin >> pos;
-                                        if (pos == "b") {
+                                        if (pos == "b") { // bench him
                                                 my_team->bench_player(name, false);
                                         } else if (pos == "s") {
                                                 my_team->make_pitcher_starter(name);
@@ -150,6 +173,7 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
 
                 cout << "would you like to navigate to your team? [y/n] ";
                 cin >> name;
+                // manipulate the team
                 if (name == "y") {
                         manip_team(my_team);
                         break;

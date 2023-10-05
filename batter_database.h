@@ -1,3 +1,13 @@
+/**************************************************************
+ *                     batter_database.h
+ *     Author: Alex Shriver
+ *   
+ *     Declarations for the batter_database class defined in 
+ *     batter_database.cpp. Utilizes the batter class to create a database 
+ *     of batters. Below are the functions available to the client
+ *     
+ **************************************************************/
+
 #ifndef _BATTER_DATABASE_H_
 #define _BATTER_DATABASE_H_
 
@@ -40,6 +50,7 @@ private:
 
         list <batter> listify();
         
+        // hash map for batter data. Key: player name, Data: Batter instance
         unordered_map <string, batter> data;
         
 };

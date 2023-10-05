@@ -1,3 +1,13 @@
+/**************************************************************
+ *                     pitcher_database.h
+ *     Author: Alex Shriver
+ *   
+ *     Declarations for the pitcher_database class defined in 
+ *     pitcher_database.cpp. Utilizes the pitcher class to create a database 
+ *     of pitchers. Below are the functions available to the client
+ *     
+ **************************************************************/
+
 #ifndef _PITCHER_DATABASE_H_
 #define _PITCHER_DATABASE_H_
 
@@ -34,6 +44,7 @@ private:
 
         list <pitcher> listify();
 
+        // hash map for batter data. Key: player name, Data: Batter instance
         unordered_map <string, pitcher> data;
         
 };
