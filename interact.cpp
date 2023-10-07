@@ -184,11 +184,24 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
         }
 }
 
+/**********print********
+ * Prints the database of players by position, stat, or value based on user 
+ *      inputted requests from cin
+ * Inputs:
+ *      batter_database *avail_batters: a full database of available hitters
+ *      pitcher_database *avail_pitchers: a full database of available pitchers
+ * Return: n/a
+ * Expects: nonnull databases
+ ************************/
 void print(batter_database *avail_batters, pitcher_database *avail_pitchers) 
 {
+        // pit_hit used to designate looking for pitchers or hitters
+        // TODO: find a way to organize this so you don't have to pick between 
+                // pitchers and hitters so early, or if at all
         string pit_hit = "", filter, first, last, name, stat, pos;
 
-        while (pit_hit[0] != 'q') {
+        // this loops until the user enters a word starting with Q or q
+        while (pit_hit[0] != 'q' && pit_hit[0] != 'Q') {
                 cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++                                                                                                ++++++++++++\n"
@@ -201,12 +214,15 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                 cout << "Would you like to look at pitchers or hitters [p/h] ";
                 cin >> pit_hit;
 
-                if (pit_hit[0] == 'q') {
+                // if they choose to quit right away, get out of here
+                if (pit_hit[0] == 'q' || pit_hit[0] == 'Q') {
                         break;
                 }
-                cout << "Grab a player or filter by stat/position? [pl/s/po] ";
+
+                cout << "Grab a player [pl] or filter by stat [s] or position [po]? [pl/s/po] ";
                 cin >> filter;
 
+                // print a player
                 if (filter == "pl") {
                         cout << "What is the players name? ";
                         cin >> first >> last;
@@ -216,14 +232,17 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                         } else if (pit_hit == "h") {
                                 avail_batters->get_player(name).print_stats();
                         }
+                // print the batters or pitchers by stat
                 } else if (filter == "s") {
                         cout << "What stat would you like to sort by?\n";
+                        // for pitchers
                         if (pit_hit == "p") {
-                                cout << "options: ip, w, era, whip, so, $\n";
+                                cout << "Options: [ip, w, era, whip, so] (Please type the entire stat lower case)$\n";
                                 cout << "stat: ";
                                 cin >> stat;
+                                // TODO: integrate tolower() to accept upper and lower case spellings of the options
                                 cout << endl << endl;
-                                print_pitcher_categories();
+                                print_pitcher_categories(); // header of the stats before list of players
                                 if (stat == "ip") {
                                         avail_pitchers->print_innings();
                                 } else if (stat == "w") {
@@ -242,12 +261,14 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                                         cout << "unrecognized: " << stat << endl;
                                 }
                                 cout << endl << endl;
+                        // for hitters
                         } else if (pit_hit == "h") {
-                                cout << "options: ab, r, hr, rbi, sb, avg, $\n";
+                                cout << "options: [ab, r, hr, rbi, sb, avg] (Please type the entire stat lower case)$\n";
                                 cout << "stat: ";
                                 cin >> stat;
+                                // TODO: integrate tolower() to accept upper and lower case spellings of the options
                                 cout << endl << endl;
-                                print_hitter_categories();
+                                print_hitter_categories(); // header of the stats before list of players
                                 if (stat == "ab") {
                                         avail_batters->print_at_bats();
                                 } else if (stat == "r") {
@@ -269,17 +290,18 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                                 }
                                 cout << endl << endl;
                         }
-                } else if (filter == "po") {
+                } else if (filter == "po") {  // filter by position
                         if (pit_hit == "p") {
                                 avail_pitchers->print_values();
                         } else {
                                 cout << "What position would you like to filter? Here are your options: \n";
-                                cout << "C, 1B, 2B, SS, 3B, CI, MI, OF\n";
+                                cout << "[C, 1B, 2B, SS, 3B, CI, MI, OF]\n";
                                 cout << "position: ";
                                 cin >> pos;
                                 cout << endl << endl;
                                 print_hitter_categories();
                                 avail_batters->print_pos(pos);
+                                // TODO: allow user to filter by stat within positions
                         }
                         cout << endl << endl;
                 } else if (filter[0] == 'q') {
@@ -295,10 +317,20 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
 
 }
 
+/**********manip_team********
+ * Allows the user to manipulate their own team by changing their lineup positions
+ * Inputs:
+ *      team *my_team: the user's team
+ * Return: n/a
+ * Expects: nonnull team
+ ************************/
 void manip_team(team *my_team) 
 {
+        // pit_hit designates pitcher or hitter 
         string command = "", pit_hit, first, last, name = "", pos;
-        while (command[0] != 'q') {
+
+        // query until asked to quit
+        while (command[0] != 'q' && command[0] != 'Q') {
                 cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++                                                                                                ++++++++++++\n"
@@ -311,44 +343,50 @@ void manip_team(team *my_team)
                 cout << "Your options:    [p:  print options]  [a:  adjust lineup/rotation]  [x:  change extra position]\n";
                 cout << "command: ";
                 cin >> command;
-                if (command[0] == 'q') {
+                if (pit_hit[0] == 'q' || pit_hit[0] == 'Q') {
                         break;
-                } else if (command == "p") {
+                } else if (command == "p") { // print
                         cout << "Your options:    [a:  print entire team]  [h:  print hitters]  [p:  print pitchers]  [s:  print salary summary]\n";
                         cout << "command: ";
                         cin >> command;
-                        if (command[0] == 'q') {
+                        if (command[0] == 'q' || command[0] == 'Q') {
                                 break;
+                        // print entire team
+                        // TODO: restructure this with less conditionals
                         } else if (command == "a") {
                                cout << endl << endl;
                                my_team->print_hitters();
                                cout << endl << endl << endl;
                                my_team->print_pitchers(); 
                                cout << endl << endl << endl;
+                        // just print the hitters
                         } else if (command == "h") {
                                 cout << endl << endl;
                                 my_team->print_hitters();
                                 cout << endl << endl << endl;
+                        // just print the pitchers
                         } else if (command == "p") {
                                 cout << endl << endl;
                                 my_team->print_pitchers();
                                 cout << endl << endl << endl;
+                        // print the salary summary for the team (how much money we left and where we spent it)
                         } else if (command == "s") {
                                 cout << endl << endl;
                                 my_team->salary_summary();
                                 cout << endl << endl << endl;
                         }
+                // adjust lineup
                 } else if (command == "a") {
                         cout << "Are you moving a pitcher or hitter? [p/h] ";
                         cin >> pit_hit;
-                        if (pit_hit[0] == 'q') {
+                        if (pit_hit[0] == 'q' || pit_hit[0] == 'Q') {
                                 break;
                         }
                         cout << "What is the players name? ";
                         cin >> first >> last;
                         name += first + " " + last;
                         if (pit_hit == "p") {
-                                cout << "Are we benching, starting " << name << " [b/s] ";
+                                cout << "Are we benching or starting " << name << " [b/s] ";
                                 cin >> pos;
                                 if (pos == "b") {
                                         my_team->bench_player(name, false);
@@ -357,7 +395,10 @@ void manip_team(team *my_team)
                                 } else {
                                         cout << "unrecognized" << endl;
                                 }
-                        }
+                        } else if (pit_hit == "h") { // TODO: Implement this
+                                cout << "I'm sorry, but this is not yet implemented" << endl;
+                        } 
+                // In this league, we have one extra position outside the normal lineup. These are the options
                 } else if (command == "x") {
                         cout << "What would you like to make the extra position? Your options are: CI, OF5, P\n";
                         cout << "command: ";
@@ -369,18 +410,12 @@ void manip_team(team *my_team)
         }
 }
 
-// bool open_up(ifstream &stream, string file_name) {
-//         stream.open(file_name);
-//         if (not stream.is_open()) {
-//                 cerr << "Error: could not open file " << file_name << endl;
-//                 return false;
-//         }
-//         return true;
-// }
-
-// void draft_file(ifstream &file, batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team) 
-// {}
-
+/*******************************************************************************
+ *
+ *          These two functions print the stat categories lineup up with 
+ *          how they are printed for individual players
+ * 
+ ******************************************************************************/
 void print_hitter_categories()
 {
         cout << left << setw(25) << setfill(' ') << "NAME";

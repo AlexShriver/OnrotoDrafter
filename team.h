@@ -56,11 +56,13 @@ private:
 
         batter initialize_batter(ifstream &file, string name);
         pitcher initialize_pitcher(ifstream &file, string first);
+
         // Member variables
         batter hitters[NUM_HITTERS];
         list <batter> bench_hitters;
 
-        int num_pitchers;
+        int num_pitchers;   // the number of pitchers (reliever or starter) that
+                            // can be started
         list <pitcher> hurlers;
         list <pitcher> bench_hurlers;
 

@@ -1,3 +1,17 @@
+/**************************************************************
+ *                     team.cpp
+ *     Author: Alex Shriver
+ *   
+ *     Definition of the class declared in team.h. This is 
+ *     a class to represent a team and the methods associated with 
+ *     changing that team.
+ *  
+ *     Note: This league supports 23 starters, 22 of which are defined.
+ *           The extra position (extra_pos) can be a 10th pitcher, 
+ *           a fifth outfielder, or a corner infielder
+ *     
+ **************************************************************/
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -7,10 +21,22 @@
 
 using namespace std;
 
+/**********team********
+ * Initializes a team based on information from a specifically formatted file. 
+ *      For this format, see the text file my_team.txt
+ * Inputs:
+ *       ifstream &file: The file holding the team
+ * Return: n/a
+ * Expects: file to be nonnull
+ ************************/
 team::team(ifstream &file) 
-{
+{       
+        // TODO: assert file nonnull
+
+        // Default initialization of these member variables
         extra_pos = "P";
-        num_pitchers = 9;
+        num_pitchers = 9;   // the number of pitchers (reliever or starter) that
+                            // can be started
         salary_left = STARTING_SALARY;
         batter_salary = 0;
         pitcher_salary = 0;
@@ -18,26 +44,32 @@ team::team(ifstream &file)
         file >> first;
         bool add_sal = true;
 
+        position slot;  // the position for the player to fill on the team
+        string name, last, pos;
+
+        // while loop to initialize and store the hitters on the team
         while (true) {
                 add_sal = true;
-                position slot;
-                string name, last, pos;
 
+                // Done with hitters
                 if (first == "Pitchers") {
                         break;
                 }
 
+                // initialize the hitter
                 file >> last >> pos;
                 name = first + " " + last;
                 batter hitter = initialize_batter(file, name);
                 
                 file >> first;
 
+                // handles injured players and players in the minors
                 if (first == "(D)") {
                         hitter.set_injured();
                         file >> first;
                 } else if (first == "(I)") {
-                        add_sal = false;
+                        // players in the minors don't hurt salary
+                        add_sal = false;  
                         hitter.set_minors(true);
                         file >> first;
                 } 
@@ -54,15 +86,22 @@ team::team(ifstream &file)
         }
 
         file >> first;
+        bool bench = false;
+        // handles initializing and storing pitchers
         while (true) {
-                bool bench = false;
+                bench = false;
                 add_sal = true;
+
+                // initialize the pitcher
                 pitcher hurler = initialize_pitcher(file, first);
                 file >> first;
+
+                // handles pitchers who are injured or in the minors
                 if (first == "(D)") {
                         hurler.set_injured();
                         file >> first;
                 } else if (first == "(I)") {
+                        // Automatically bench the pitcher and don't add salary
                         add_sal = false;
                         bench = true;
                         hurler.set_minors(true);
@@ -85,6 +124,7 @@ team::team(ifstream &file)
         salary_left -= (batter_salary + pitcher_salary);
 }
 
+// Converts a string pos to its equivalent lineup enum
 lineup team::convert_position(string pos) 
 {
         if (pos == "C1") {
@@ -120,8 +160,17 @@ lineup team::convert_position(string pos)
         }
 }
 
+/**********initialize_batter********
+ * Initializes a batter based on the immediate line in a team file
+ * Inputs:
+ *       ifstream &file: The file holding the batter to be initialized
+ *       string name:    The player's name
+ * Return: the batter instance
+ * Expects: file to be nonnull
+ ************************/
 batter team::initialize_batter(ifstream &file, string name) 
 {
+        // TODO: assert file nonnull
         string elig;
         int at_bats, runs, homeruns, rbi, stolen_bases;
         float value, average;
@@ -150,8 +199,17 @@ batter team::initialize_batter(ifstream &file, string name)
                       stolen_bases, average, value);
 }
 
+/**********initialize_pitcher********
+ * Initializes a pitcher based on the immediate line in a team file
+ * Inputs:
+ *       ifstream &file: The file holding the batter to be initialized
+ *       string first:    The player's first name
+ * Return: the pitcher instance
+ * Expects: file to be nonnull
+ ************************/
 pitcher team::initialize_pitcher(ifstream &file, string first)
 {
+        // TODO: assert file nonnull
         string last, name, pos;
         int innings_pitched, wins, strikeouts, HOSV;
         float value, era, whip;
@@ -168,25 +226,35 @@ pitcher team::initialize_pitcher(ifstream &file, string first)
         pitcher p = pitcher(name, innings_pitched, wins, era, whip, strikeouts, 
                             value, false);
 
+        // says if pitcher is a starting pitcher or a reliever
         if (pos == "SP") {
                 p.set_starter(true);
         } else {
                 p.set_starter(false);
         }
-
         return p;
 }
 
+/**********player_here********
+ * Checks if there is a player at the argued lineup position.
+ *      If it is a pitcher, checks if there are open slots for starters (SP or RP)
+ * Inputs:
+ *       bool hitter:       True if looking for a hitter
+ *       linup position:    The position of the hitter, P otherwise for pitcher
+ * Return:  false if there is a spot open at the position and true if there is
+ *          a player there already
+ * Expects: n/a
+ ************************/
 bool team::player_here(bool hitter, lineup position)
 {
         if (hitter) {
                 return hitters[position].is_player();
         } else {
-                // test this
                 return (hurlers.size() >= num_pitchers);
         }
 }
 
+// returns the number of players on the team
 int team::check_team_size()
 {
         int num_hitters = bench_hitters.size();
@@ -198,6 +266,7 @@ int team::check_team_size()
         return bench_hurlers.size() + hurlers.size() + num_hitters;
 }
 
+// converts and argued position, int or lineup enum, and returns the string conversion
 string team::convert_lineup_to_string(int pos)
 {
         if (pos == 0) {
@@ -228,11 +297,14 @@ string team::convert_lineup_to_string(int pos)
                 return "OF4";
         } else if (pos == 13) {
                 return "OF5";
-        } else  {
+        } else if (pos == 15) {
+                return "P";
+        } else {
                 return "B";
         }
 }
 
+// prints the formatted stat line for the hitters in the team interface
 void team::print_hitter_categories()
 {
         cout << left << setw(8)  << setfill(' ') << "POS";
@@ -249,6 +321,12 @@ void team::print_hitter_categories()
 << "--------------------------------------------------------------------------------------------\n";
 }
 
+/**********print_hitters********
+ * Prints the list of hitters on the team, starters and bench
+ * Inputs:  n/a
+ * Return:  n/a
+ * Expects: n/a
+ ************************/
 void team::print_hitters() 
 {
         cout 
@@ -258,7 +336,9 @@ void team::print_hitters()
 
         print_hitter_categories();
 
+        // prints the starting hitters and their stats
         for (int i = 0; i < NUM_HITTERS; i++) {
+                // this if statement handles the extra position (see file header)
                 if (not (((i == 7) and extra_pos == "CI") or 
                          (i == 13 and extra_pos == "OF5"))) 
                 {
@@ -273,7 +353,7 @@ void team::print_hitters()
         }
 
 cout << "--------------------------------------------------------------------------------------------\n";
-        print_batter_stats(true);
+        print_batter_stats(true);  // prints the total stat projections for the starting hitters
         cout << endl
 << "*************************************************************************\n"
 << "*********                    BENCH HITTERS                      *********\n"
@@ -481,7 +561,7 @@ void team::add_new_pitcher(pitcher player)
         add_pitcher(player);
 }
 
-// need to ask use who to bench first if want to start
+// need to ask user who to bench first if want to start
 void team::add_pitcher(pitcher player) 
 {
         if (check_team_size() >= NUM_PLAYERS) {

@@ -69,3 +69,11 @@ To compile the drafter, run Make OnRoto_Drafter
     - Generally use more exceptions
     - Think about using more inheritance. For instance, could batters and 
       pitchers inherit from a player superclass? Could I combine the two databases?
+    - Pretty generally, account for better protection against segmentation faults
+    - The entire team interface needs work
+        - I finished this part of the program in the waning minutes before the draft, 
+        so there are definitely areas for improvement:
+            - Starting hitters from the bench
+            - General user frendliness
+            - Attempting to start a player when someone else needs to be benched first
+

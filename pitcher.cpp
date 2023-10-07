@@ -1,3 +1,13 @@
+/**************************************************************
+ *                     pitcher.cpp
+ *     Author: Alex Shriver
+ *   
+ *     Definition of the class declared in pitcher.h. This is 
+ *     a class to represent a pitcher and information about their
+ *     projected season.
+ *     
+ **************************************************************/
+
 #include <iostream>
 #include <iomanip>
 #include "pitcher.h"
