@@ -59,6 +59,14 @@ pitcher: This class handles representing individual pitchers and manipulating
 draft: The driver file that contains the main function for executing the
        drafter program
 
+interact: This is a class that facilitates the interactivity provided for the
+       user. Utilizes the other classes in this program to give the user 
+       power over drafting and managing their team with the databases of players
+
+team: This class represents storing the players on the team. Should be 
+      initialized with the keeper players heading into the draft, and updated
+      as the user drafts players through methods in interact
+
 
 
 ----- COMPILATION ------

@@ -6,9 +6,15 @@
  *     a class to represent a team and the methods associated with 
  *     changing that team.
  *  
- *     Note: This league supports 23 starters, 22 of which are defined.
- *           The extra position (extra_pos) can be a 10th pitcher, 
- *           a fifth outfielder, or a corner infielder
+ *     Note: This league supports 23 starters, 21 of which are defined.
+ *           For the next two positions, the user can use two of the
+ *           following three options: a tenth pitcher, a fifth outfielder
+ *           or a corner indielder (1B or 3B).
+ * 
+ *     Note: See team.h for detailed explanation of data structures 
+ * 
+ *     Full disclosure, I wrote this file at 3 am, just hours before
+ *     the start of the draft.
  *     
  **************************************************************/
 
@@ -362,10 +368,11 @@ cout << "-----------------------------------------------------------------------
                 print_hitter_categories();
                 print_bench_hitters();
                 cout << "--------------------------------------------------------------------------------------------\n";
-                print_batter_stats(false);
+                print_batter_stats(false); // prints the total stat projections for the benched hitters
         }
 }
 
+// prints the statlines for each benched hitter
 void team::print_bench_hitters()
 {
         int count = 1;
@@ -376,6 +383,7 @@ void team::print_bench_hitters()
         }
 }
 
+// prints the header stats to go above listed pitchers
 void team::print_pitcher_categories()
 {
         cout << left << setw(8)  << setfill(' ') << "POS";
@@ -390,6 +398,12 @@ void team::print_pitcher_categories()
 << "--------------------------------------------------------------------------\n";
 }
 
+/**********print_pitchers********
+ * Prints the list of pitchers on the team, starters and bench
+ * Inputs:  n/a
+ * Return:  n/a
+ * Expects: n/a
+ ************************/
 void team::print_pitchers() 
 {
         cout 
@@ -399,6 +413,7 @@ void team::print_pitchers()
 
         print_pitcher_categories();
 
+        // prints the starting pitchers' stats
         for (auto it = hurlers.begin(); it != hurlers.end(); it++) {
                 if (it->get_starter()) {
                         cout << "SP .... ";
@@ -409,7 +424,7 @@ void team::print_pitchers()
         }
 
         cout << "--------------------------------------------------------------------------\n";
-        print_pitcher_stats(true);
+        print_pitcher_stats(true);  // print the total stats of all starting pitchers
         cout << endl
 << "*************************************************************************\n"
 << "*********                    BENCH PITCHERS                     *********\n"
@@ -423,6 +438,7 @@ void team::print_pitchers()
         }
 }
 
+// prints all the bench players' stats
 void team::print_bench_pitchers()
 {
         for (auto it = bench_hurlers.begin(); it != bench_hurlers.end(); it++) {
@@ -435,6 +451,15 @@ void team::print_bench_pitchers()
         }
 }
 
+/**********check_extra_spot********
+ * checks if the extra spot is the argued position and prints an appropriate 
+ *      response, thus meaning the position cannot be used
+ * Inputs:  
+ *      lineup pos: the position to check
+ * Return:  true if the position is the same as the argued option,
+ *       false if it is different or if the position is P
+ * Expects: n/a
+ ************************/
 bool team::check_extra_spot(lineup pos)
 {
         if (pos == CORNER and extra_pos == "CI") {
@@ -447,8 +472,18 @@ bool team::check_extra_spot(lineup pos)
         return false;
 }
 
+/**********change_position********
+ * Swtiches a batter's position based on their original position and their new
+ *      position
+ * Inputs:  
+ *      lineup og_pos: the current position of the batter
+ *      lineup new_pos: the new position for the batter
+ * Return: n/a
+ * Expects: two batter lineup positions for arguments
+ ************************/
 void team::change_position(lineup og_pos, lineup new_pos) 
 {
+        // check if the extra spot must be switched
         if (check_extra_spot(new_pos)) { return; }
 
         batter player = hitters[og_pos];
@@ -456,23 +491,35 @@ void team::change_position(lineup og_pos, lineup new_pos)
                 cout << "No player at original position" << endl;
                 return;
         }
+        // give original position an empty batter
         hitters[og_pos] = batter();
 
         add_batter(player, new_pos);
 }
 
+/**********make_batter_starter********
+ * Moves an argued batter from the bench to a starting position
+ * Inputs:  
+ *      string name: the name of the player to be started
+ *      lineup new_pos: the new position for the player
+ * Return:  n/a
+ * Expects: a player on the bench and a valid new position
+ ************************/
 void team::make_batter_starter(string name, lineup new_pos)
 {
+        // check if the extra spot must be changed
         if (check_extra_spot(new_pos)) { return; }
 
         batter player;
         for (auto it = bench_hitters.begin(); it != bench_hitters.end(); it++) {
                 if (it->get_name() == name) {
                         player = *it;
-                        it = bench_hitters.erase(it);
+                        // remove player from bench
+                        it = bench_hitters.erase(it); 
                 }  
         }
 
+        // couldn't find batter on bench
         if (not player.is_player()) {
                 cout << "Could not find " << name << " on your bench" << endl;
                 cout << "here is your bench: " << endl;
@@ -480,11 +527,20 @@ void team::make_batter_starter(string name, lineup new_pos)
                 return;
         }
 
+        // start the batter
         add_batter(player, new_pos);
 }
 
+/**********make_pitcher_starter********
+ * Moves an argued pitcher from the bench to a starting position
+ * Inputs:  
+ *      string name: the name of the player to be started
+ * Return:  n/a
+ * Expects: a player on the bench
+ ************************/
 void team::make_pitcher_starter(string name) 
 {
+        // find the pitcher
         pitcher player;
         for (auto it = bench_hurlers.begin(); it != bench_hurlers.end(); it++) {
                 if (it->get_name() == name) {
@@ -500,21 +556,33 @@ void team::make_pitcher_starter(string name)
                 return;
         }
 
+        // start the pitcher
         add_pitcher(player);
 }
 
+/**********bench_player********
+ * Moves an argued player (pitcher or batter) from their starting spot
+ *          to the bench
+ * Inputs:  
+ *      string name: the name of the player to be benched
+ *      bool hitter: tells if the player is a pitcher or hitter
+ * Return:  n/a
+ * Expects: a player on the starting lineup
+ ************************/
 void team::bench_player(string name, bool hitter)
 {
         if (hitter) {
                 for (int i = 0; i < NUM_HITTERS; i++) {
                         if (hitters[i].get_name() == name) {
+                                // bench and replace spot with empty batter
                                 bench_hitters.push_back(hitters[i]);
-                                hitters[i] = batter();
+                                hitters[i] = batter();  
                         }
                 }
         } else {
                 for (auto it = hurlers.begin(); it != hurlers.end(); it++) {
                         if (it->get_name() == name) {
+                                // bench pitcher and remove from hurlers list
                                 bench_hurlers.push_back(*it);
                                 it = hurlers.erase(it);
                         }  
@@ -522,19 +590,30 @@ void team::bench_player(string name, bool hitter)
         }
 }
 
+/**********check_eligibility********
+ * checks if an argued batter can be played at an argued position
+ * Inputs:  
+ *      batter player: the hitter to check eligibility for
+ *      lineup new_pos: their potential new position
+ * Return:  true if they are eligible, false otherwise
+ * Expects: a non-empty player
+ ************************/
 bool team::check_eligibility(batter player, lineup new_pos)
 {
+        // TODO: check if player is real
         stringstream ss(player.get_eligibility());
         string elig_pos, str_new_pos;
         bool elig = false;
         str_new_pos = convert_lineup_to_string(new_pos);
 
+        // converts the new_pos lineup enum to match eligibility field of batter
         if (str_new_pos[0] == 'O') {
                 str_new_pos = "OF";
         } else if (str_new_pos[0] == 'C') {
                 str_new_pos = "C";
         }
 
+        // loop through the players elibility to check for a match
         while ((ss >> elig_pos) and not elig) {
                 if (new_pos == CORNER) {
                         if (elig_pos == "3B" or elig_pos == "1B") {
@@ -553,7 +632,13 @@ bool team::check_eligibility(batter player, lineup new_pos)
         return elig;
 }
 
-
+/**********add_new_pitcher********
+ * adjusts the team salary and adds a new pitcher
+ * Inputs:  
+ *      pitcher player: the pitcher to add
+ * Return:  n/a
+ * Expects: a valid pitcher
+ ************************/
 void team::add_new_pitcher(pitcher player) 
 {
         pitcher_salary += player.get_value();
@@ -561,13 +646,21 @@ void team::add_new_pitcher(pitcher player)
         add_pitcher(player);
 }
 
-// need to ask user who to bench first if want to start
+/**********add_pitcher********
+ * places a new pitcher onto the team, ideally starting
+ * Inputs:  
+ *      pitcher player: the pitcher to add to the team
+ * Return:  n/a
+ * Expects: a valid pitcher
+ ************************/
 void team::add_pitcher(pitcher player) 
 {
         if (check_team_size() >= NUM_PLAYERS) {
                 cout << "TEAM IS FULL!!" << endl;
                 return;
         }
+
+        // if there are too many starters, bench the pitcher
         if (hurlers.size() >= num_pitchers) {
                 cout << "Too many pitchers started; " << player.get_name() 
                      << " benched" << endl;
@@ -577,6 +670,14 @@ void team::add_pitcher(pitcher player)
         }
 }
 
+/**********add_new_pitcher********
+ * adjusts the team salary and adds a new batter to their argued position
+ * Inputs:  
+ *      batter player: the batter to add
+ *      string position: the position to give them
+ * Return:  n/a
+ * Expects: a valid batter
+ ************************/
 void team::add_new_batter(batter player, string position) 
 {
         batter_salary += player.get_value();
@@ -584,6 +685,15 @@ void team::add_new_batter(batter player, string position)
         add_batter(player, convert_position(position));
 }
 
+/**********add_batter********
+ * places a batter pitcher onto the team, ideally in their argued position
+ *      and benches the previous started if necessary
+ * Inputs:  
+ *      batter player: the batter to add to the team
+ *      lineup position: the position to start them at
+ * Return:  n/a
+ * Expects: a valid batter and position
+ ************************/
 void team::add_batter(batter player, lineup position) 
 {
         if (check_team_size() >= NUM_PLAYERS) {
@@ -592,8 +702,10 @@ void team::add_batter(batter player, lineup position)
         }
         if (check_extra_spot(position)) { return; }
 
+        // triggers if argued position is bench
         if (not check_eligibility(player, position)) {
                 bench_hitters.push_back(player);
+        // bench the old starter
         } else if (hitters[position].is_player()) {
                 batter bench = hitters[position];
                 bench_hitters.push_back(bench);
@@ -603,12 +715,20 @@ void team::add_batter(batter player, lineup position)
         }
 }
 
-// need to test
+/**********set_extra_pos********
+ * changes the extra position, i.e. which of OF5, P10, or CI will not be used
+ * Inputs:  
+ *      string pos: the new extra position
+ * Return:  n/a
+ * Expects: pos = OF5, P, or CI
+ ************************/
 void team::set_extra_pos(string pos) 
 { 
         extra_pos = pos;
         if (extra_pos != "P") {
                 num_pitchers = 10;
+                // changes the batter's position if they are at the previous
+                // extra position
                 if (player_here(true, convert_position(extra_pos))) {
                         cout << "new position: ";
                         string new_pos;
@@ -617,8 +737,9 @@ void team::set_extra_pos(string pos)
                         lineup nlin_pos = convert_position(new_pos);
                         change_position(xlin_pos, nlin_pos);
                 } 
-        } else { // test this
+        } else { 
                 num_pitchers = 9;
+                // benches the 10th pitcher
                 if (player_here(false, P)) {
                         pitcher back = hurlers.back();
                         hurlers.pop_back();
@@ -627,6 +748,13 @@ void team::set_extra_pos(string pos)
         }
 }
 
+/**********print_batter_stats********
+ * prints the stats of all the starting or benched batters on the team
+ * Inputs:  
+ *      bool start: indicates to print the starter data or bench data
+ * Return:  n/a
+ * Expects: n/a
+ ************************/
 void team::print_batter_stats(bool start) 
 {
         int ab = 0;
@@ -636,6 +764,7 @@ void team::print_batter_stats(bool start)
         int sb = 0;
         float avg = 0.0;
 
+        // print starter data
         if (start) {
                 int count = 0;
                 for (int i = 0; i < NUM_HITTERS; i++) {
@@ -652,11 +781,14 @@ void team::print_batter_stats(bool start)
                 }
                 avg = avg / ab;
                 cout << "######  ";
+                // prints the total stats of the starters
                 batter("TOTAL", "NA", ab, runs, homeruns, rbi, sb, avg, batter_salary).print_stats();
                 cout << "######  ";
+                // prints the average stats of the starters
                 batter("AVERAGE", "NA", ab / count, runs / count, 
                        homeruns / count, rbi / count, sb / count, avg, 
                        batter_salary).print_stats();
+        // print the bench hitters' stats
         } else {
                 int count = bench_hitters.size();
                 for (auto it = bench_hitters.begin(); it != bench_hitters.end(); it++) {
@@ -678,6 +810,14 @@ void team::print_batter_stats(bool start)
         }
 }
 
+/**********print_pitcher_stats********
+ * prints the stats of all the starting or benched pitchers on the team
+ * Inputs:  
+ *      bool start: indicates to print the starter data or bench data
+ * Return:  n/a
+ * Expects: n/a
+ * Note: this function follows the same format as print_batter_stats
+ ************************/
 void team::print_pitcher_stats(bool start) 
 {
         int innings_pitched = 0;
@@ -724,6 +864,9 @@ void team::print_pitcher_stats(bool start)
 
 }
 
+/**********salary_summary********
+ * Prints data about the team's salary and where it has been allocated
+ ************************/
 void team::salary_summary() 
 {
         cout 

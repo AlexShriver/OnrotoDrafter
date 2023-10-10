@@ -7,7 +7,7 @@
  *     allow user interaction with their team and the databases
  *     of available players.
  * 
- *     Full disclosure, I wrote this file at 3 am just hours before
+ *     Full disclosure, I wrote this file at 3 am, just hours before
  *     the start of the draft.
  * 
  *     TODO: Clean up this file

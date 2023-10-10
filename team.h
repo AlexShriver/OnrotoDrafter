@@ -1,3 +1,16 @@
+/**************************************************************
+ *                     team.h
+ *     Author: Alex Shriver
+ *   
+ *     Declaration of the class defined in team.cpp. This is 
+ *     a class to represent a team and the methods associated with 
+ *     changing that team.
+ * 
+ *     Check further down the file for more information on the 
+ *     data structures of the class
+ *     
+ **************************************************************/
+
 #ifndef _TEAM_H_
 #define _TEAM_H_
 
@@ -7,6 +20,7 @@
 #include <list>
 #include <vector>
 
+// Constants for the team
 const int STARTING_SALARY = 254;
 const int NUM_HITTERS = 14;
 const int NUM_PLAYERS = 40;
@@ -14,6 +28,7 @@ const int SALARY_PLAYERS = 25;
 
 using namespace std;
 
+// used to index the array of starting batters
 typedef enum lineup {
         C1 = 0, C2, DH, FIRST, SECOND, SHORT, THIRD, CORNER, INNER, OF1, OF2, 
         OF3, OF4, OF5, BENCH, P
@@ -26,7 +41,7 @@ public:
 
         void print_hitters();
         void print_pitchers();
-        // takes a starter and moves them or benches them
+        
         void change_position(lineup og_pos, lineup new_pos);
         void add_new_pitcher(pitcher player);
         void add_new_batter(batter player, string position);
@@ -49,30 +64,40 @@ private:
         void print_bench_pitchers();
         bool player_here(bool hitter, lineup position);
         int check_team_size();
-        lineup convert_position(string pos);  // doesn't work for P
-        string convert_lineup_to_string(int pos);   // neither does this
+        lineup convert_position(string pos);  
+        string convert_lineup_to_string(int pos);   
 
         bool check_eligibility(batter player, lineup new_pos);
 
         batter initialize_batter(ifstream &file, string name);
         pitcher initialize_pitcher(ifstream &file, string first);
 
-        // Member variables
+/*******************************************************************************
+ *
+ *          Private member variables
+ * 
+ ******************************************************************************/
+        // This is an array representing the starting hitters, indexed by the 
+        // lineup enum
         batter hitters[NUM_HITTERS];
+
+        // A linked list of the benched batters (in no particular order)
         list <batter> bench_hitters;
 
         int num_pitchers;   // the number of pitchers (reliever or starter) that
                             // can be started
+        
+        // A linked list of the starting pitchers (in no particular order)
         list <pitcher> hurlers;
+
+        // A linked list of the benched pitchers (in no particular order)
         list <pitcher> bench_hurlers;
 
-        string extra_pos;
+        string extra_pos;      // the extra position not used (CI, P10, or OF5)
         int salary_left;
         int batter_salary;
         int pitcher_salary;
 
 };
-
-// still need to write make_starter(), compare against other stats
 
 #endif
