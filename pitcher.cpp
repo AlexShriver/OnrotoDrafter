@@ -23,7 +23,8 @@ using namespace std;
  * Expects: n/a
  ************************/
 pitcher::pitcher(string i_name, int i_innings, int i_wins, float i_era, 
-                 float i_whip, int i_strikeouts, float i_value, bool i_injured) 
+                 float i_whip, int i_strikeouts, int i_HOSV, float i_value, 
+                 bool i_starter, bool i_injured) 
 {
         name = i_name;
         innings = i_innings;
@@ -31,12 +32,12 @@ pitcher::pitcher(string i_name, int i_innings, int i_wins, float i_era,
         era = i_era;
         whip = i_whip;
         strikeouts = i_strikeouts;
+        HOSV = i_HOSV;
         value = i_value;
         injured = i_injured;
+        starter = i_starter;
 
         // Initialized this way, changed by other class functions
-        starter = true;
-        HOSV = 0;
         player_here = true;
         minors = false;
 }
@@ -69,9 +70,7 @@ void pitcher::print_stats()
         cout << left << setw(9)  << setfill(' ') << era;
         cout << left << setw(9)  << setfill(' ') << whip;
         cout << left << setw(6)  << setfill(' ') << strikeouts;
-        if (not starter) {
-                cout << left << setw(6)  << setfill(' ') << HOSV;
-        }
+        cout << left << setw(6)  << setfill(' ') << HOSV;
         cout << left << setw(8)  << setfill(' ') << ("$$ " + to_string(value));
         if (injured) {
                 cout << "IL";
@@ -117,7 +116,10 @@ int pitcher::get_value() { return value; }
  ******************************************************************************/
 void pitcher::set_injured() { injured = true; }
 
-void pitcher::set_starter(bool start) { starter = start; }
+void pitcher::set_starter(bool start) { 
+    cerr << "I think this function is outdated" << endl; 
+    starter = start; 
+}
 
 void pitcher::set_HOSV(int i_HOSV) { HOSV = i_HOSV; }
 

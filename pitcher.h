@@ -20,7 +20,7 @@ class pitcher
 public:
 
         pitcher(string i_name, int i_innings, int i_wins, float i_era, 
-                 float i_whip, int i_strikeouts, float i_value, bool i_injured);
+                 float i_whip, int i_strikeouts, int i_HOSV, float i_value, bool i_starter, bool i_injured);
         pitcher();
         
         void print_stats();

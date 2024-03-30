@@ -1,0 +1,183 @@
+ Juan Soto  NYY             DH OF        550    97   34   91   10   0.280     6.27  30.98  41.50
+ Yordan Alvarez  Hou        DH OF        525    95   33  100    3   0.297     6.03  30.29  40.57
+ Tyler O'Neill  Bos         DH OF        466    77   21   76   14   0.264     3.31  22.49  30.03
+ Jose Ramirez  Cle          DH 3B        564    79   23   83   17   0.238     3.31  22.48  30.02
+ Marcus Semien  Tex         DH 2B        571    91   23   69   12   0.245     2.87  21.24  28.34
+ Jarren Duran  Bos          DH OF        482    74   13   62   23   0.259     2.87  21.22  28.31
+ Randy Arozarena  TB        DH OF        536    78   24   78   19   0.218     2.76  20.92  27.92
+ Chas McCormick  Hou        DH OF        446    61   17   64   16   0.285     2.74  20.86  27.83
+ Adolis Garcia  Tex         DH OF        555    80   28   82   13   0.218     2.56  20.35  27.15
+ Daulton Varsho  Tor        DH OF        487    66   17   65   25   0.232     2.45  20.02  26.70
+ Riley Greene  Det          DH OF        526    76   16   64    9   0.283     2.35  19.74  26.32
+ Zach Neto  LAA             DH SS        480    60   18   55   15   0.269     1.88  18.38  24.48
+ Byron Buxton  Min          DH OF        430    68   24   67    9   0.242     1.57  17.51  23.30
+ Jeremy Pena  Hou           DH SS        550    74   15   60   15   0.249     1.55  17.45  23.22
+ Adley Rutschman  Bal       C DH         503    75   21   69    3   0.260     1.36  16.91  22.49
+ MJ Melendez  KC            DH OF        484    71   21   59    8   0.252     1.24  16.55  22.01
+ Taylor Ward  LAA           DH OF        487    70   18   73    8   0.246     1.16  16.31  21.69
+ Josh Jung  Tex             DH 3B        499    66   23   72    4   0.251     1.14  16.26  21.61
+ Vaughn Grissom  Bos        DH SS        432    59   11   52   12   0.285     0.95  15.72  20.89 (D) 
+ Eloy Jimenez  CWS          DH OF        465    56   20   70    1   0.280     0.90  15.59  20.71
+ Salvador Perez  KC         1B C DH      506    64   24   75    1   0.247     0.74  15.13  20.08
+ Anthony Rizzo  NYY         1B DH        418    62   18   69    4   0.263     0.69  14.97  19.87
+ Triston Casas  Bos         1B DH        446    66   22   67    2   0.253     0.66  14.89  19.76
+ Yoan Moncada  CWS          DH 3B        521    67   15   61    6   0.259     0.45  14.30  18.96
+ Carlos Correa  Min         DH SS        541    71   19   70    1   0.251     0.41  14.17  18.80
+ Jose Abreu  Hou            1B DH        476    66   18   80    0   0.248     0.20  13.57  17.99
+ Ty France  Sea             1B DH        536    71   14   73    2   0.254     0.17  13.47  17.85
+ Nate Lowe  Tex             1B DH        474    63   17   62    3   0.259     0.14  13.40  17.75 (D) 
+ Ryan Mountcastle  Bal      1B DH        462    60   19   68    4   0.245     0.10  13.29  17.61
+ Amed Rosario  TB           DH 2B SS     412    54    8   45   16   0.260    -0.09  12.75  16.88
+ Seth Brown  Oak            DH OF        455    55   19   65    5   0.240    -0.22  12.37  16.36
+ Alex Verdugo  NYY          DH OF        496    67   11   60    6   0.252    -0.32  12.09  15.99
+ Spencer Torkelson  Det     1B DH        547    72   21   78    3   0.210    -0.37  11.94  15.78
+ Nicky Lopez  CWS           DH 2B 3B     470    58    3   41   17   0.260    -0.49  11.60  15.32
+ Giancarlo Stanton  NYY     DH OF        401    54   24   62    0   0.237    -0.52  11.52  15.21
+ Andrew Benintendi  CWS     DH OF        495    65    8   48    8   0.261    -0.59  11.32  14.94
+ J.J. Bleday  Oak           DH OF        460    58   17   50    8   0.233    -0.70  11.00  14.51
+ Colt Keith  Det            DH 3B        456    54   15   57    3   0.257    -0.72  10.93  14.41
+ Alex Kirilloff  Min        1B DH OF     362    46   16   49    2   0.279    -0.78  10.78  14.21
+ Mark Canha  Det            DH OF        445    56   11   61    8   0.240    -0.80  10.70  14.11
+ Aaron Hicks  LAA           DH OF        329    48    9   43    9   0.280    -0.81  10.69  14.09
+ Alejandro Kirk  Tor        C DH         383    50   15   55    1   0.272    -0.83  10.61  13.99
+ Mickey Moniak  LAA         DH OF        379    45   14   46    9   0.253    -0.87  10.51  13.85
+ Ramon Laureano  Cle        DH OF        416    52   12   50   15   0.219    -0.90  10.41  13.71
+ Brandon Lowe  TB           DH 2B        452    62   20   58    6   0.204    -1.13   9.75  12.82
+ D.J. LeMahieu  NYY         1B DH 3B     474    69   11   56    4   0.236    -1.20   9.55  12.55 (D) 
+ Mitch Haniger  Sea         DH OF        424    51   20   50    2   0.238    -1.23   9.47  12.45
+ Hunter Renfroe  KC         DH OF        455    57   21   64    1   0.218    -1.23   9.47  12.45
+ Jon Berti  NYY             DH SS 3B     307    41    5   34   17   0.254    -1.38   9.04  11.87
+ Will Brennan  Cle          DH OF        346    40    7   44   11   0.260    -1.50   8.71  11.42
+ Logan O'Hoppe  LAA         C DH         391    48   18   51    4   0.223    -1.69   8.17  10.68
+ J.D. Davis  Oak            DH 3B        445    53   15   58    1   0.234    -1.75   7.99  10.44
+ Dairon Blanco  KC          DH OF        214    28    4   24   19   0.266    -1.90   7.56   9.87
+ Michael Massey  KC         DH 2B        339    41   13   43    6   0.242    -1.95   7.40   9.65 (D) 
+ Carlos Santana  Min        1B DH        395    46   13   46    2   0.248    -2.06   7.08   9.22
+ Lawrence Butler  Oak       DH OF        364    42    9   39    9   0.242    -2.13   6.91   8.98
+ Jake Meyers  Hou           DH OF        360    45   12   38    8   0.225    -2.28   6.46   8.38
+ Miguel Andujar  Oak        DH OF        286    35   10   38    4   0.269    -2.37   6.21   8.04 (D) 
+ Trent Grisham  NYY         DH OF        301    43   10   43   11   0.203    -2.39   6.15   7.96
+ Rob Refsnyder  Bos         DH OF        244    38    7   36    5   0.279    -2.42   6.07   7.85 (D) 
+ Estevan Florial  Cle       DH OF        358    40   10   36   14   0.207    -2.42   6.05   7.82
+ Wilyer Abreu  Bos          DH OF        311    50   12   42    7   0.206    -2.44   6.00   7.76
+ Luke Raley  Sea            1B DH OF     360    45   12   46    9   0.200    -2.52   5.78   7.45
+ Javier Baez  Det           DH SS        490    54   11   50    9   0.198    -2.67   5.34   6.86
+ Jo Adell  LAA              DH OF        249    34   11   33    8   0.225    -2.79   4.99   6.39
+ Matt Vierling  Det         DH 3B OF     274    37    8   32    6   0.248    -2.91   4.66   5.94
+ Paul DeJong  CWS           DH SS        301    33   11   38    5   0.236    -2.92   4.63   5.90
+ Anthony Rendon  LAA        DH 3B        352    48    7   49    4   0.219    -3.05   4.24   5.38
+ Giovanny Urshela  Det      1B DH 3B     280    32    6   32    2   0.282    -3.18   3.89   4.91
+ Ezequiel Duran  Tex        DH SS 3B O   246    32    7   28    6   0.252    -3.28   3.59   4.49
+ Dominic Fletcher  CWS      DH OF        335    41    8   36    5   0.227    -3.29   3.56   4.45
+ Gabriel Arias  Cle         1B DH SS     305    36    9   33    6   0.220    -3.45   3.11   3.85
+ Darell Hernaiz  Oak        DH SS        272    30    4   25    7   0.257    -3.57   2.77   3.40
+ Luis Urias  Sea            DH 2B        323    41   12   37    2   0.207    -3.66   2.52   3.05
+ Gavin Sheets  CWS          1B DH OF     248    27   10   31    3   0.238    -3.70   2.40   2.89
+ Reese McGuire  Bos         C DH         246    29    5   26    2   0.280    -3.73   2.31   2.77
+ Taylor Walls  TB           DH 2B SS 3   233    29    6   24   11   0.206    -3.77   2.18   2.59 (D) 
+ Manuel Margot  Min         DH OF        286    36    4   38    9   0.199    -3.83   2.03   2.38
+ Ernie Clement  Tor         DH SS        191    25    4   22    5   0.277    -3.89   1.85   2.15
+ Carson Kelly  Det          C DH         265    31    8   28    1   0.249    -3.96   1.66   1.89
+ Nick Allen  Oak            DH SS        266    27    5   22    7   0.241    -4.01   1.50   1.68
+ Oswaldo Cabrera  NYY       DH OF        193    28    7   24    6   0.223    -4.01   1.50   1.67
+ Andy Ibanez  Det           DH 2B OF     214    27    8   27    2   0.248    -4.02   1.47   1.63
+ Garrett Hampson  KC        DH SS OF     234    30    3   22    8   0.235    -4.06   1.35   1.48
+ Michael Stefanic  LAA      DH 2B        213    28    3   25    2   0.268    -4.31   0.63   0.50 (D) 
+ Adam Frazier  KC           DH 2B        240    29    3   26    5   0.233    -4.41   0.35   0.13
+ Ramon Urias  Bal           DH 2B 3B     207    25    6   25    2   0.246    -4.42   0.33   0.09
+ Abraham Toro  Oak          DH 3B        182    23    5   23    2   0.264    -4.44   0.28   0.03
+ Oswald Peraza  NYY         DH 3B        160    22    5   18    7   0.212    -4.61  -0.21  -0.63 (D) 
+ Jonathan Aranda  TB        DH           150    20    6   19    1   0.273    -4.64  -0.30  -0.75 (D) 
+ Braden Shewmake  CWS       DH SS        184    20    4   17    8   0.217    -4.70  -0.47  -0.98
+ Kyle Farmer  Min           DH 2B SS 3   219    28    5   24    2   0.228    -4.76  -0.65  -1.23
+ Victor Caratini  Hou       C DH         212    28    5   26    1   0.222    -4.92  -1.11  -1.85
+ Bobby Dalbec  Bos          1B DH        123    17    6   17    3   0.236    -4.95  -1.18  -1.95
+ James McCann  Bal          C DH         226    26    6   25    2   0.212    -4.97  -1.25  -2.03
+ Sam Haggerty  Sea          DH OF        116    16    3   14    7   0.224    -4.98  -1.28  -2.08 (D) 
+ Curtis Mead  TB            DH 3B        153    19    4   18    2   0.255    -5.01  -1.38  -2.21
+ Freddy Fermin  KC          C DH         155    20    5   22    0   0.245    -5.11  -1.65  -2.58
+ Travis Jankowski  Tex      DH OF        120    17    1   15    7   0.225    -5.14  -1.74  -2.70
+ Matt Thaiss  LAA           C DH         178    22    4   20    2   0.213    -5.38  -2.43  -3.64
+ Miguel Sano  LAA           1B DH        152    19    7   20    1   0.197    -5.40  -2.49  -3.71
+ Andrew Knizner  Tex        C DH         155    18    5   20    1   0.219    -5.42  -2.55  -3.80
+ Pablo Reyes  Bos           DH 2B SS     124    18    3   15    4   0.210    -5.44  -2.59  -3.86
+ Jonathan Singleton  Hou    1B DH        152    20    5   23    0   0.204    -5.55  -2.92  -4.29
+ David Fry  Cle             C DH         121    15    4   15    1   0.240    -5.56  -2.96  -4.35
+ Max Stassi  CWS            C DH         204    20    5   18    0   0.225    -5.58  -2.99  -4.39 (D) 
+ Josh Smith  Tex            DH SS 3B O   116    15    3   13    2   0.241    -5.59  -3.04  -4.46
+ Nick Loftin  KC            1B DH         91    11    3   11    2   0.253    -5.72  -3.40  -4.95
+ Jonny DeLuca  TB           DH OF         91    11    3   10    3   0.231    -5.77  -3.55  -5.15 (D) 
+ Seby Zavala  Sea           C DH         149    18    5   17    0   0.201    -5.86  -3.81  -5.49
+ Martin Maldonado  CWS      C DH         263    25    8   24    2   0.163    -5.88  -3.85  -5.56
+ Korey Lee  CWS             C DH         120    12    4   11    2   0.208    -5.97  -4.12  -5.92
+ Austin Hedges  Cle         C DH         123    13    2   13    1   0.236    -5.98  -4.16  -5.97
+ Richie Palacios  TB        DH OF         61     8    2    8    2   0.246    -6.10  -4.48  -6.40
+ Grae Kessinger  Hou        DH SS 3B      87    12    2   11    2   0.195    -6.18  -4.73  -6.75
+ Daniel Vogelbach  Tor      1B DH         60     8    3   10    0   0.233    -6.24  -4.90  -6.97
+ Tony Kemp  Bal             DH 2B OF      59     7    1    7    2   0.237    -6.32  -5.13  -7.29
+ Aledmys Diaz  Oak          DH SS 3B      90     9    2    9    0   0.222    -6.47  -5.57  -7.87 (D) 
+ Kevin Pillar  CWS          DH OF         62     7    1    7    1   0.226    -6.52  -5.70  -8.05
+ Brian Serven  Tor          C DH          63     8    3    9    0   0.175    -6.57  -5.84  -8.24
+ Jared Walsh  Tex           1B DH         60     7    2    7    0   0.200    -6.66  -6.10  -8.59
+ Ben Rortvedt  TB           C DH          30     4    1    3    0   0.200    -6.92  -6.83  -9.58
+ Jahmai Jones  NYY          DH            18     2    0    2    0   0.222    -7.07  -7.26  -10.16
+ Chad Wallach  LAA          C DH          31     3    1    3    0   0.194    -6.97  -7.00  -9.80 (I) 
+ Jose Tena  Cle             DH SS         30     3    1    3    1   0.233    -6.74  -6.32  -8.89 (I) 
+ Colson Montgomery  CWS     3B           146    17    3   15    2   0.219    -5.72  -3.39  -4.93 (I) 
+ Jair Camargo  Min          C             31     4    1    4    0   0.226    -6.82  -6.56  -9.22 (I) 
+ Roberto Perez  Bos         C DH          30     3    1    3    0   0.167    -7.03  -7.17  -10.03 (I) 
+ Hunter Dozier  LAA         DH 3B         61     8    2    7    1   0.213    -6.43  -5.42  -7.68 (I) 
+ Andrew Knapp  Tex          C             30     3    1    3    0   0.233    -6.88  -6.72  -9.43 (I) 
+ Kyle Stowers  Bal          DH OF         31     4    2    4    0   0.226    -6.71  -6.23  -8.77 (I) 
+ Jorbit Vivas  NYY          2B            32     5    1    4    0   0.219    -6.80  -6.51  -9.14 (I) 
+ Lenyn Sosa  CWS            DH 2B        123    14    5   13    0   0.252    -5.58  -3.01  -4.41 (I) 
+ Tyler Nevin  Bal           DH 3B         31     4    1    4    0   0.258    -6.74  -6.34  -8.91 (I) 
+ Justin Foscue  Tex         2B           117    15    3   14    2   0.231    -5.65  -3.21  -4.69 (I) 
+ Robbie Grossman  CWS       DH OF        172    22    5   21    2   0.233    -4.96  -1.23  -2.02 (I) 
+ Yunior Severino  Min       2B            32     4    1    4    0   0.219    -6.84  -6.62  -9.29 (I) 
+ Francisco Mejia  TB        C DH          61     6    2    6    0   0.246    -6.52  -5.70  -8.05 (I) 
+ Trevor Larnach  Min        DH OF        149    21    6   21    1   0.235    -4.97  -1.24  -2.03 (I) 
+ Jake Marisnick  LAA        DH OF         32     4    1    4    2   0.250    -6.49  -5.60  -7.92 (I) 
+ Everson Pereira  NYY       DH OF         20     3    1    3    1   0.200    -6.78  -6.43  -9.04 (I) 
+ Tyler Gentry  KC           OF            60     8    2    8    1   0.233    -6.29  -5.04  -7.16 (I) 
+ Ben Rice  NYY              C             30     4    1    4    0   0.233    -6.80  -6.51  -9.14 (I) 
+ Brett Phillips  CWS        DH OF         31     4    1    4    1   0.194    -6.76  -6.39  -8.98 (I) 
+ Bryan Ramos  CWS           3B            31     4    1    4    0   0.226    -6.82  -6.56  -9.22 (I) 
+ Romy Gonzalez  Bos         DH 2B         66     9    2    9    3   0.242    -5.90  -3.93  -5.65 (I) 
+ Samad Taylor  Sea          DH OF         62     9    1    8    5   0.242    -5.78  -3.57  -5.17 (I) 
+ Johnathan Rodriguez  Cle   OF            50     6    2    7    1   0.240    -6.36  -5.25  -7.45 (I) 
+ Drew Waters  KC            DH OF        177    23    6   18    7   0.249    -4.01   1.49   1.66 (I) 
+ Tyler Soderstrom  Oak      DH           184    19    6   21    1   0.179    -5.86  -3.81  -5.49 (I) 
+ Osleivis Basabe  TB        DH SS         62     7    1    6    2   0.242    -6.34  -5.18  -7.35 (I) 
+ Addison Barger  Tor        SS            64     9    2    8    1   0.266    -6.10  -4.49  -6.42 (I) 
+ Jose Barrero  Tex          DH SS         31     4    1    4    1   0.194    -6.76  -6.39  -8.98 (I) 
+ Ryan Kreidler  Det         DH 2B SS 3    29     4    1    3    1   0.241    -6.68  -6.16  -8.67 (I) 
+ Sam Huff  Tex              C DH          91    11    4   11    0   0.198    -6.27  -4.97  -7.07 (I) 
+ Rafael Ortega  CWS         DH OF         30     4    1    3    1   0.200    -6.78  -6.43  -9.04 (I) 
+ Taylor Trammell  Sea       DH OF         88    11    4   10    3   0.216    -5.75  -3.50  -5.07 (I) 
+ Cesar Salazar  Hou         C DH          30     3    1    3    0   0.167    -7.03  -7.17  -10.03 (I) 
+ Justin Dirden  Hou         OF            30     3    1    3    0   0.200    -6.95  -6.94  -9.73 (I) 
+ Dillon Dingler  Det        C             29     3    1    3    0   0.207    -6.93  -6.89  -9.65 (I) 
+ Rob Brantly  TB            C             30     3    1    3    0   0.300    -6.72  -6.27  -8.82 (I) 
+ Joey Votto  Tor            1B DH        139    19    7   22    0   0.209    -5.30  -2.19  -3.31 (I) 
+ Anthony Prato  Min         3B            31     5    1    3    1   0.226    -6.68  -6.16  -8.67 (I) 
+ David Hamilton  Bos        DH SS         97    14    2   13    8   0.196    -5.24  -2.04  -3.10 (I) 
+ Derek Hill  Tex            DH OF         32     4    1    4    1   0.250    -6.62  -6.00  -8.45 (I) 
+ Carlos E. Perez  Oak       C DH          90     9    3   10    0   0.178    -6.63  -6.02  -8.48 (I) 
+ Zach Remillard  CWS        DH 2B         60     7    1    6    2   0.233    -6.38  -5.29  -7.50 (I) 
+ David Hensley  Hou         DH            56     8    1    6    1   0.214    -6.56  -5.80  -8.19 (I) 
+ Myles Straw  Cle           DH OF         30     3    0    2    1   0.267    -6.81  -6.53  -9.18 (I) 
+ Brian Anderson  Sea        DH 3B OF     119    14    3   13    1   0.210    -6.06  -4.38  -6.26 (I) 
+ Corey Julks  Hou           DH OF        123    16    4   14    5   0.228    -5.12  -1.69  -2.64 (I) 
+ Alex Jackson  TB           C            151    17    5   15    1   0.225    -5.56  -2.96  -4.35 (I) 
+ Austin Nola  KC            C DH          62     7    1    7    0   0.210    -6.74  -6.32  -8.89 (I) 
+ Keston Hiura  Det          1B            60     8    3   10    1   0.267    -5.95  -4.06  -5.84 (I) 
+ Wynton Bernard  CWS        OF            31     4    1    4    1   0.258    -6.61  -5.94  -8.38 (I) 
+ Ehire Adrianza  LAA        DH SS         63     7    1    7    1   0.206    -6.62  -5.98  -8.43 (I) 
+ Kevin Smith  NYY           DH SS         31     4    1    4    1   0.226    -6.68  -6.16  -8.68 (I) 
+ Nick Pratto  KC            1B DH OF     120    17    5   19    2   0.267    -4.84  -0.88  -1.54 (I) 
+ Nathan Lukes  Tor          DH OF         95    13    1   12    3   0.305    -5.32  -2.25  -3.38 (I) 
+ Nate Eaton  KC             DH OF         30     4    1    3    1   0.233    -6.70  -6.21  -8.74 (I) 
+ Jordan Diaz  Oak           DH 2B 3B      63     7    2    7    0   0.206    -6.64  -6.04  -8.51 (I) 
+ Danny Mendick  CWS         DH 2B         63     8    1    6    1   0.222    -6.54  -5.75  -8.12 (I) 
+ Jacob Wilson  Oak          SS            30     3    0    3    0   0.267    -6.91  -6.83  -9.57 (I) 

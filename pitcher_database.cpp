@@ -76,8 +76,8 @@ pitcher pitcher_database::initialize_pitcher(ifstream &file, string first)
                 value = 1;
         }
 
-        return pitcher(name, innings_pitched, wins, era, whip, strikeouts, 
-                       value, false);
+        return pitcher(name, innings_pitched, wins, era, whip, strikeouts, HOSV, 
+                       value, HOSV == 0, false);
 }
 
 /**********add_player********

@@ -38,7 +38,7 @@ void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
         string command = "", sure;
 
         // This is the general loop which will end when the command is to quit
-        while (command != "quit" and command[0] != "q") 
+        while (command != "quit" and command[0] != 'q') 
         {
                 cout << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
@@ -63,7 +63,7 @@ void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                 } else if (command == "t") {
                         // manipulate the team
                         manip_team(my_team);
-                } else if (command == "quit" or command[0] == "q") {
+                } else if (command == "quit" or command[0] == 'q') {
                         cout << "\n\nARE YOU SURE??? YOU WILL LOSE ALL PROGRESS: [y/n] ";
                         cin >> sure;
                         if (sure != "y") {
@@ -128,6 +128,12 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                         break;
                 }
 
+                // report the status to files
+                my_team->players_drafted++;
+                if (my_team->players_drafted % 10 == 0) {
+                    cout << "print time!" << endl;
+                }
+
                 cout << "Did you draft this player? [y/n] ";
                 cin >> draft;
 
@@ -148,7 +154,7 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                                 hurler.set_value(price);
                                 cout << "Is your pitcher a starter or reliever? [r/s] ";
                                 cin >> pos;
-                                if (pos == "r" || pos[0] == "r" || pos[0] == "R") {
+                                if (pos == "r" || pos[0] == 'r' || pos[0] == 'R') {
                                         hurler.set_starter(false);
                                 }
                                 my_team->add_new_pitcher(hurler);

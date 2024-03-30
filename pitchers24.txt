@@ -1,0 +1,270 @@
+ Josh Hader Hou               66     4   3.955   1.318   84   38     4.84  52.07  27.84
+ Shane Bieber Cle            161    10   3.410   1.118  158    0     4.65  50.39  26.95
+ Pablo Lopez Min             164    10   4.006   1.104  180    0     4.50  49.00  26.22
+ Justin Verlander Hou        144    10   3.688   1.056  145    0     4.19  46.23  24.77 (D) 
+ Ryan Pressly Hou             71     5   3.423   1.211   77   25     3.56  40.60  21.81
+ Craig Kimbrel Bal            69     4   4.174   1.319   86   31     3.53  40.29  21.64
+ Carlos Rodon NYY            139     9   3.755   1.079  143    0     3.48  39.87  21.43
+ Corbin Burnes Bal           161     9   4.137   1.143  169    0     3.29  38.18  20.54
+ Ian Hamilton NYY             63     5   3.000   1.238   73   22     3.07  36.17  19.48
+ Triston McKenzie Cle        137     8   3.810   1.131  146    0     2.76  33.43  18.04
+ Garrett Whitlock Bos        119     8   3.933   1.151  107    7     2.42  30.33  16.41
+ Marcus Stroman NYY          150    10   3.840   1.200  128    0     2.36  29.81  16.14
+ Gerrit Cole NYY             110     7   3.682   1.064  125    0     2.21  28.51  15.46 (D) 
+ Chris Martin Bos             69     4   4.174   1.304   72   24     1.98  26.40  14.35
+ JP Sears Oak                130     7   4.015   1.123  121    0     1.45  21.66  11.86
+ David Robertson Tex          62     4   3.919   1.290   68   20     1.44  21.58  11.82
+ Erik Swanson Tor             59     4   3.814   1.322   65   19     1.15  18.96  10.44 (D) 
+ James McArthur KC            65     4   3.877   1.292   66   18     1.05  18.12  10.00
+ Reid Detmers LAA            141     8   4.213   1.291  146    0     1.00  17.61   9.73
+ Shawn Armstrong TB           67     4   3.627   1.164   68   13     0.94  17.06   9.44
+ Ronel Blanco Hou             95     6   3.695   1.253   91    7     0.88  16.59   9.19
+ Gabe Speier Sea              63     4   4.143   1.381   59   21     0.86  16.35   9.07
+ Erick Fedde CWS             152     7   4.263   1.237  140    0     0.81  15.92   8.84
+ Kyle Bradish Bal            101     6   3.743   1.129  105    0     0.77  15.54   8.64 (D) 
+ Tyler Wells Bal             115     7   3.991   1.157  102    0     0.63  14.32   8.00
+ Scott Barlow Cle             70     4   3.729   1.343   84   13     0.62  14.27   7.97
+ Robert Stephenson LAA        56     3   4.179   1.286   67   16     0.28  11.17   6.35 (D) 
+ Tayler Saucedo Sea           59     4   3.814   1.271   57   14     0.23  10.77   6.14
+ John Brebbia CWS             56     3   4.500   1.357   56   20     0.21  10.52   6.00
+ Mike Soroka CWS             105     6   3.943   1.181  102    0     0.18  10.29   5.88
+ Seth Lugo KC                137     7   4.664   1.219  131    0     0.17  10.17   5.82
+ Matt Moore LAA               56     4   3.375   1.286   56   12     0.09   9.43   5.43
+ Louie Varland Min           129     7   4.326   1.264  121    0     0.04   9.06   5.24
+ Max Scherzer Tex             77     5   3.857   1.078   93    0     0.04   9.04   5.22 (D) 
+ Daniel Coulombe Bal          56     4   3.696   1.321   53   13    -0.15   7.35   4.34
+ Lucas Erceg Oak              67     3   4.164   1.433   61   18    -0.18   7.08   4.19
+ Steven Okert Min             57     4   3.789   1.246   66    9    -0.25   6.41   3.84
+ Brock Burke Tex              66     4   3.955   1.242   63   10    -0.26   6.29   3.78
+ James Karinchak Cle          48     3   4.312   1.396   63   15    -0.35   5.51   3.37 (D) 
+ Chase Silseth LAA           121     7   4.240   1.306  112    0    -0.36   5.44   3.33
+ Kutter Crawford Bos         121     7   4.612   1.248  114    0    -0.37   5.33   3.27
+ Paul Blackburn Oak          122     6   4.279   1.221  105    0    -0.37   5.31   3.27
+ Ryan Pepiot TB              111     6   4.459   1.234  113    0    -0.40   5.09   3.15
+ Nick Sandlin Cle             57     4   3.316   1.246   56    8    -0.42   4.87   3.03
+ Jack Flaherty Det           121     6   4.463   1.298  127    0    -0.46   4.53   2.86
+ Shelby Miller Det            59     3   4.119   1.356   64   13    -0.54   3.81   2.48
+ Shane Baz TB                 89     5   4.348   1.180  100    0    -0.62   3.11   2.11 (D) 
+ Sam Hentges Cle              62     3   4.065   1.468   67   14    -0.68   2.59   1.83 (D) 
+ Tyler Anderson LAA          136     7   4.632   1.294  118    0    -0.72   2.18   1.62
+ J.P. France Hou             122     7   4.426   1.352  116    0    -0.79   1.54   1.28
+ Gregory Santos Sea           55     3   4.091   1.255   54   11    -0.80   1.51   1.27 (D) 
+ Caleb Thielbar Min           48     3   4.125   1.292   57   11    -0.82   1.35   1.19 (D) 
+ Keegan Akin Bal              47     3   3.255   1.149   49    7    -0.88   0.77   0.88
+ Michael Wacha KC            113     6   4.540   1.283  110    0    -0.90   0.61   0.79
+ Anthony DeSclafani Min       97     5   4.361   1.165   88    0    -0.91   0.49   0.73 (D) 
+ Andrew Chafin Det            59     3   3.966   1.271   66    8    -0.94   0.20   0.58
+ Alek Manoah Tor              88     5   4.091   1.227   88    0    -0.97  -0.05   0.45 (D) 
+ Jacob DeGrom Tex             41     3   2.854   0.902   61    0    -1.01  -0.37   0.28 (D) 
+ Tyler Holton Det             59     3   3.966   1.237   58    8    -1.06  -0.86   0.02
+ Greg Weissert Bos            52     4   3.808   1.346   55    8    -1.07  -0.94  -0.02
+ Rafael Montero Hou           62     4   4.645   1.532   63   14    -1.10  -1.17  -0.14
+ Phil Maton TB                62     4   3.774   1.306   72    4    -1.13  -1.50  -0.31
+ Luis Gil NYY                 80     5   4.162   1.250   86    0    -1.19  -2.00  -0.57
+ Kirby Yates Tex              50     3   4.320   1.340   57   10    -1.25  -2.51  -0.84
+ Chris Devenski TB            53     3   3.736   1.245   46    8    -1.31  -3.05  -1.13
+ Tanner Banks CWS             47     3   3.830   1.277   45    9    -1.31  -3.09  -1.15
+ Logan Allen Cle             122     6   4.648   1.320  111    0    -1.32  -3.16  -1.19
+ Luis Medina Oak             100     5   4.320   1.350  106    0    -1.39  -3.75  -1.50 (D) 
+ Mitch Spence Oak             81     4   4.333   1.321   70    6    -1.44  -4.24  -1.76
+ Isaiah Campbell Bos          47     4   3.255   1.234   44    4    -1.46  -4.38  -1.83
+ Tommy Kahnle NYY             46     3   4.109   1.326   49    9    -1.47  -4.50  -1.89 (D) 
+ Chris Stratton KC            65     3   4.569   1.400   61   11    -1.50  -4.83  -2.06
+ Parker Mushinski Hou         41     3   3.293   1.293   41    7    -1.56  -5.32  -2.32
+ Jose Soriano LAA             74     4   4.500   1.392   72    7    -1.59  -5.57  -2.45
+ Tyler Alexander TB           77     4   4.091   1.247   62    3    -1.63  -5.91  -2.63
+ Alex Wood Oak               114     5   4.658   1.272   98    0    -1.65  -6.13  -2.75
+ Dillon Tate Bal              43     3   2.721   1.116   33    3    -1.75  -6.99  -3.20
+ Kody Funderburk Min          48     3   3.938   1.375   51    7    -1.81  -7.60  -3.52
+ Chad Green Tor               59     3   4.881   1.390   64    9    -1.83  -7.74  -3.59
+ Ryne Stanek Sea              46     3   4.109   1.348   50    7    -1.84  -7.83  -3.64
+ Adam Cimber LAA              47     3   3.255   1.149   38    3    -1.89  -8.26  -3.87
+ Will Vest Det                63     3   4.571   1.540   64   11    -1.90  -8.40  -3.94
+ Chris Paddack Min           113     6   4.779   1.327   94    0    -1.93  -8.61  -4.05
+ Michael Lorenzen Tex         92     5   4.598   1.293   83    0    -1.96  -8.90  -4.20 (D) 
+ Jonathan Loaisiga NYY        51     3   4.412   1.373   42    9    -2.02  -9.43  -4.48
+ Sawyer Gipson-Long Det       68     3   4.500   1.162   72    0    -2.11  -10.25  -4.91 (D) 
+ Luis Garcia LAA              65     3   4.708   1.462   61    9    -2.18  -10.85  -5.23
+ Eli Morgan Cle               53     2   4.585   1.358   56    8    -2.18  -10.89  -5.25
+ Caleb Ferguson NYY           46     3   3.913   1.348   52    4    -2.19  -11.01  -5.31
+ Austin Adams Oak             54     3   3.833   1.241   63    0    -2.21  -11.17  -5.40
+ Seth Martinez Hou            41     3   3.512   1.268   43    3    -2.22  -11.27  -5.45
+ Tim Hill CWS                 51     3   3.882   1.392   32    8    -2.25  -11.49  -5.56
+ Jordan Leasure CWS           43     2   3.977   1.372   45    7    -2.29  -11.83  -5.74
+ Trent Thornton Sea           50     3   4.680   1.380   43    8    -2.32  -12.10  -5.88
+ Justin Slaten Bos            47     3   4.021   1.383   52    4    -2.35  -12.45  -6.07
+ Steven Wilson CWS            56     3   3.857   1.429   62    3    -2.36  -12.52  -6.11
+ Carlos Carrasco Cle          78     4   4.385   1.269   62    0    -2.48  -13.61  -6.68
+ Victor Gonzalez NYY          46     3   4.304   1.304   44    4    -2.51  -13.83  -6.79
+ Cade Smith Cle               44     3   3.477   1.273   50    0    -2.52  -13.89  -6.82
+ Joey Wentz Det               87     4   4.966   1.402   85    3    -2.54  -14.14  -6.96
+ Michael Kopech CWS           51     2   4.765   1.510   55    9    -2.57  -14.38  -7.08
+ T.J. McFarland Oak           46     3   3.326   1.217   38    0    -2.64  -14.96  -7.39
+ Jeffrey Springs TB           32     2   3.375   1.031   40    0    -2.66  -15.21  -7.52 (D) 
+ Tyler Mahle Tex              48     3   4.312   1.229   55    0    -2.67  -15.29  -7.56 (D) 
+ Cole Irvin Bal              104     5   4.846   1.365   74    2    -2.68  -15.37  -7.60
+ Jose Cisnero LAA             47     3   3.638   1.277   44    0    -2.78  -16.24  -8.06
+ Drew Rasmussen TB            32     2   3.375   1.000   34    0    -2.78  -16.26  -8.07 (D) 
+ Jake Latz Tex                46     3   4.109   1.435   49    3    -2.79  -16.36  -8.12
+ Jordan Lyles KC             118     5   5.339   1.314   96    0    -2.84  -16.77  -8.34
+ Genesis Cabrera Tor          39     2   4.385   1.410   39    6    -2.87  -17.03  -8.48
+ Bowden Francis Tor           52     3   4.327   1.212   47    0    -2.88  -17.12  -8.52
+ Jose Urquidy Hou             53     3   4.245   1.208   45    0    -2.88  -17.13  -8.53 (D) 
+ Lance McCullers Hou          48     3   4.312   1.292   54    0    -2.88  -17.16  -8.54 (D) 
+ Scott Effross NYY            25     2   4.320   1.320   26    6    -2.88  -17.19  -8.56 (D) 
+ Nick Anderson KC             48     2   4.875   1.500   41    9    -2.94  -17.70  -8.83
+ Xzavion Curry Cle            59     3   4.576   1.288   46    2    -3.01  -18.30  -9.14 (D) 
+ Patrick Sandoval LAA        127     6   5.173   1.480  116    0    -3.02  -18.44  -9.22
+ Jose Suarez LAA              58     3   4.190   1.293   49    0    -3.02  -18.45  -9.22
+ Alex Faedo Det               41     2   3.732   1.195   41    0    -3.04  -18.56  -9.28
+ Luke Weaver NYY              54     3   4.333   1.278   48    0    -3.07  -18.83  -9.42
+ Nick Burdi NYY               38     3   3.789   1.368   43    0    -3.09  -19.03  -9.52
+ Carlos Hernandez KC          52     2   5.192   1.481   54    7    -3.12  -19.29  -9.66 (D) 
+ Austin Voth Sea              50     3   4.140   1.300   44    0    -3.12  -19.30  -9.67
+ Cionel Perez Bal             60     3   5.250   1.600   54    9    -3.12  -19.34  -9.69
+ Dominic Leone CWS            34     2   4.235   1.324   31    4    -3.13  -19.44  -9.74
+ Jay Jackson Min              39     2   3.923   1.385   36    3    -3.21  -20.09  -10.08
+ Mitchell White Tor           36     2   4.000   1.333   30    3    -3.28  -20.73  -10.42
+ Garrett Cleavinger TB        40     2   4.725   1.500   35    6    -3.36  -21.50  -10.82
+ Cody Bradford Tex            57     3   4.579   1.281   44    0    -3.36  -21.51  -10.83
+ Chris Flexen CWS            121     5   4.983   1.438   92    0    -3.40  -21.81  -10.98
+ Jonathan Hernandez Tex       54     2   5.167   1.593   52    8    -3.40  -21.83  -11.00 (D) 
+ Tim Herrin Cle               44     2   4.091   1.364   45    0    -3.52  -22.91  -11.57
+ Alec Marsh KC                89     4   5.258   1.449   86    0    -3.58  -23.41  -11.83
+ Angel Zerpa KC               68     3   4.897   1.368   59    0    -3.60  -23.60  -11.93
+ Ross Stripling Oak          116     4   5.276   1.353   86    0    -3.60  -23.64  -11.95
+ Brandon Bielak Hou           45     3   4.400   1.378   37    0    -3.63  -23.92  -12.10
+ Emerson Hancock Sea          64     3   5.062   1.344   55    0    -3.67  -24.27  -12.28
+ Nick Vespi Bal               26     2   3.808   1.269   26    0    -3.69  -24.40  -12.35
+ Sean Newcomb Oak             37     2   4.622   1.459   40    2    -3.70  -24.48  -12.39 (D) 
+ Tayler Scott Hou             21     2   3.429   1.190   19    0    -3.70  -24.51  -12.41
+ Joe Boyle Oak                73     3   4.808   1.479   71    0    -3.73  -24.80  -12.56
+ Mike Baumann Bal             30     2   3.900   1.333   29    0    -3.75  -24.95  -12.63
+ Cody Bolton Sea              29     2   3.724   1.345   27    0    -3.77  -25.10  -12.71
+ Daniel Duarte Min            26     2   4.154   1.269   24    0    -3.85  -25.83  -13.10
+ Justin Topa Min              48     2   4.875   1.479   42    3    -3.88  -26.09  -13.23 (D) 
+ Ken Waldichuk Oak            57     2   5.211   1.351   58    0    -3.90  -26.33  -13.36 (D) 
+ Bennett Sousa Hou            41     2   4.390   1.561   34    3    -3.93  -26.55  -13.48 (D) 
+ Hunter Gaddis Cle            26     1   3.808   1.269   24    0    -4.07  -27.82  -14.15
+ Ben Lively Cle               26     1   3.808   1.269   23    0    -4.10  -28.09  -14.28 (D) 
+ Matt Sauer KC                55     2   4.909   1.436   53    0    -4.11  -28.17  -14.33
+ Josh Taylor KC               22     1   4.091   1.318   21    1    -4.12  -28.29  -14.39 (D) 
+ Luis Garcia Hou              17     1   4.235   1.118   19    0    -4.14  -28.42  -14.46 (D) 
+ Cole Sands Min               35     2   4.629   1.457   35    0    -4.14  -28.48  -14.49
+ Nate Pearson Tor             36     2   4.750   1.444   36    0    -4.15  -28.58  -14.55
+ Bryan Mata Bos               46     2   5.283   1.413   46    0    -4.25  -29.42  -14.99 (D) 
+ Jorge Alcala Min             48     2   5.062   1.396   42    0    -4.25  -29.43  -14.99
+ Kyle Muller Oak              47     2   5.170   1.511   42    2    -4.26  -29.56  -15.06
+ Eduard Bazardo Sea           21     1   4.286   1.286   21    0    -4.29  -29.80  -15.18 (D) 
+ Lou Trivino NYY              21     1   4.286   1.333   22    0    -4.32  -30.08  -15.33 (D) 
+ Wes Parsons Tor              24     1   4.125   1.375   22    0    -4.37  -30.50  -15.55
+ Clayton Beeter NYY           24     1   4.500   1.375   24    0    -4.41  -30.88  -15.75
+ Oliver Ortega Hou            16     1   3.938   1.438   17    0    -4.46  -31.32  -15.98 (D) 
+ Shawn Dubin Hou              16     1   4.500   1.375   18    0    -4.47  -31.42  -16.04 (D) 
+ Yerry Rodriguez Tex          29     1   4.655   1.448   30    0    -4.48  -31.54  -16.10
+ Jacob Waguespack TB          27     1   4.667   1.481   29    0    -4.53  -31.96  -16.32
+ Collin Snider Sea            17     1   4.235   1.353   13    0    -4.56  -32.21  -16.45
+ Scott Alexander Oak          29     1   6.207   1.655   25    5    -4.64  -32.98  -16.86 (D) 
+ Guillermo Zuniga LAA         26     1   4.846   1.462   25    0    -4.65  -33.00  -16.87
+ Michael Kelly Oak            29     1   4.655   1.517   28    0    -4.66  -33.16  -16.95
+ Josh Winder Min              17     1   4.765   1.471   17    0    -4.67  -33.17  -16.96 (D) 
+ Joely Rodriguez Bos          56     3   5.143   1.661   52    0    -4.72  -33.65  -17.21
+ Sam Bachman LAA              41     2   5.488   1.537   37    0    -4.79  -34.27  -17.53 (D) 
+ Tyler Beede Cle              51     2   5.471   1.608   37    2    -4.98  -36.03  -18.46
+ Josh Staumont Min            30     1   5.100   1.633   28    0    -5.05  -36.60  -18.76 (D) 
+ Bryan Shaw CWS               34     1   5.824   1.676   33    0    -5.41  -39.81  -20.44
+ Cade Povich Bal              17     1   4.765   1.353   18    0    -4.51  -31.80  -16.24 (I) 
+ Jake Cousins CWS             43     2   3.977   1.326   45    0    -3.36  -21.47  -10.81 (I) 
+ Zak Kent Cle                 16     1   5.062   1.375   15    0    -4.66  -33.13  -16.93 (I) 
+ Ty Madden Det                26     1   4.846   1.423   26    0    -4.56  -32.19  -16.44 (I) 
+ Corey Knebel CWS             38     2   4.737   1.474   41    0    -4.11  -28.18  -14.33 (I) 
+ Forrest Whitley Hou          21     1   3.857   1.190   22    0    -4.04  -27.53  -13.99 (I) 
+ Yerry De-Los-Santos NYY      25     1   4.680   1.520   23    0    -4.72  -33.70  -17.24 (I) 
+ Will Klein KC                17     1   4.765   1.588   20    0    -4.70  -33.48  -17.12 (I) 
+ Sam Long KC                  17     1   4.235   1.412   16    0    -4.53  -31.97  -16.32 (I) 
+ Nick Ramirez NYY             42     2   4.500   1.333   33    7    -2.78  -16.23  -8.05 (I) 
+ Brock Selvidge NYY           17     1   4.235   1.294   16    0    -4.41  -30.87  -15.75 (I) 
+ Brendon Little Tor           12     1   4.500   1.500   11    0    -4.71  -33.57  -17.17 (I) 
+ Jake Woodford CWS            25     1   5.400   1.640   19    0    -5.23  -38.21  -19.60 (I) 
+ Alex Speas CWS               47     2   4.213   1.468   44    6    -2.91  -17.42  -8.68 (I) 
+ Jimmy Herget LAA             30     2   4.500   1.433   30    0    -4.10  -28.11  -14.30 (I) 
+ Nick Nastrini CWS           113     5   4.619   1.336  105    0    -1.80  -7.44  -3.43 (I) 
+ Manuel Rodriguez TB          27     2   4.000   1.333   29    0    -3.76  -25.08  -12.70 (I) 
+ Davis Martin CWS             24     1   4.875   1.292   25    0    -4.36  -30.43  -15.51 (I) 
+ Austin Pruitt Tex            16     1   4.500   1.438   13    0    -4.68  -33.29  -17.02 (I) 
+ Daniel Lynch KC              89     4   4.854   1.326   72    0    -2.98  -18.08  -9.03 (I) 
+ Brandon Walter Bos           74     4   4.622   1.284   66    0    -2.59  -14.57  -7.18 (I) 
+ Colby White TB               18     1   5.000   1.389   18    0    -4.62  -32.73  -16.73 (I) 
+ Jaime Barria Cle             22     1   5.318   1.455   18    0    -4.87  -34.98  -17.91 (I) 
+ Owen White Tex               41     2   5.049   1.463   33    0    -4.53  -31.93  -16.30 (I) 
+ Spencer Arrighetti Hou        9     0   5.000   1.333    9    0    -4.98  -36.02  -18.46 (I) 
+ Hogan Harris Oak             21     1   3.857   1.286   21    0    -4.19  -28.89  -14.71 (I) 
+ Jacob Lopez TB               24     1   4.125   1.208   24    0    -4.06  -27.78  -14.12 (I) 
+ Tyson Miller Sea             42     3   3.643   1.286   42    0    -2.87  -17.03  -8.48 (I) 
+ Bryan Baker Bal              47     3   3.830   1.426   50    0    -3.12  -19.28  -9.66 (I) 
+ Brent Headrick Min           16     1   5.062   1.375   16    0    -4.63  -32.86  -16.80 (I) 
+ Dan Altavilla KC             17     1   5.824   1.706   13    0    -5.23  -38.26  -19.63 (I) 
+ Bruce Zimmermann Bal         32     2   4.500   1.344   28    0    -4.02  -27.40  -13.93 (I) 
+ Cory Abbott Sea              16     1   5.062   1.438   16    0    -4.69  -33.42  -17.09 (I) 
+ Zack Kelly Bos               26     2   4.500   1.538   27    0    -4.29  -29.76  -15.17 (I) 
+ Trey Wingenter Det           27     2   3.667   1.333   26    0    -3.75  -24.96  -12.64 (I) 
+ Simeon Woods-Richardson M    42     2   4.500   1.333   38    0    -3.82  -25.62  -12.99 (I) 
+ Steven Cruz KC               26     1   5.192   1.615   28    0    -4.90  -35.30  -18.07 (I) 
+ Kenny Rosenberg LAA          27     1   5.333   1.481   25    0    -4.85  -34.83  -17.83 (I) 
+ Brad Keller CWS              32     1   5.906   1.656   27    0    -5.48  -40.48  -20.80 (I) 
+ Brennan Bernardino Bos       52     4   3.635   1.269   49    8    -0.91   0.48   0.73 (I) 
+ Richard Fitts Bos            19     1   5.211   1.316   18    0    -4.60  -32.56  -16.64 (I) 
+ Jhonathan Diaz Sea            8     0   4.500   1.375    7    0    -5.00  -36.17  -18.53 (I) 
+ Zach Plesac LAA              72     3   5.375   1.472   59    0    -4.47  -31.41  -16.03 (I) 
+ Adrian Martinez Oak          21     1   4.714   1.429   18    0    -4.66  -33.15  -16.94 (I) 
+ Kevin Kelly TB               44     3   3.886   1.295   40    0    -3.07  -18.84  -9.43 (I) 
+ Hunter Strickland LAA        34     2   4.500   1.353   33    0    -3.92  -26.47  -13.44 (I) 
+ Jonathan Cannon CWS          47     2   4.596   1.319   35    0    -3.98  -27.01  -13.72 (I) 
+ Jairo Iriarte CWS            26     1   4.500   1.346   26    0    -4.33  -30.20  -15.39 (I) 
+ Zach Pop Tor                 20     1   4.500   1.500   16    0    -4.74  -33.84  -17.31 (I) 
+ Prelander Berroa CWS         34     1   4.765   1.588   45    8    -3.11  -19.18  -9.61 (I) 
+ Yariel Rodriguez Tor         60     4   4.200   1.383   59    0    -2.74  -15.93  -7.90 (I) 
+ Will Warren NYY              46     2   4.696   1.370   40    0    -4.01  -27.28  -13.86 (I) 
+ Ty Buttrey Sea               25     2   3.600   1.280   21    2    -3.45  -22.28  -11.23 (I) 
+ Trevor Clifton Tor           12     1   3.750   1.250   11    0    -4.42  -30.99  -15.81 (I) 
+ Davis Daniel LAA             35     2   4.371   1.257   33    0    -3.68  -24.33  -12.31 (I) 
+ Tucker Davidson Bal          17     1   4.235   1.412   15    0    -4.56  -32.23  -16.46 (I) 
+ Ben Joyce LAA                43     2   5.860   1.791   37    6    -4.66  -33.13  -16.93 (I) 
+ Jorge Benitez Bos            17     1   4.765   1.529   19    0    -4.67  -33.19  -16.97 (I) 
+ Osvaldo Bido Oak             32     1   5.062   1.344   29    0    -4.52  -31.83  -16.25 (I) 
+ Adam Oller Cle               13     1   5.538   1.538   12    0    -4.89  -35.16  -18.00 (I) 
+ Peter Strzelecki Cle         12     1   4.500   1.333   12    0    -4.56  -32.20  -16.45 (I) 
+ Erasmo J-Ramirez TB          22     1   5.318   1.455   16    0    -4.93  -35.51  -18.18 (I) 
+ Drew Rucinski Oak           118     6   4.729   1.280   96    0    -1.56  -5.28  -2.30 (I) 
+ Dennis Santana NYY           25     1   4.320   1.480   26    0    -4.47  -31.46  -16.06 (I) 
+ Cody Poteet NYY              37     2   5.595   1.568   31    0    -4.94  -35.65  -18.26 (I) 
+ Kaleb Ort Bal                17     1   4.235   1.471   17    0    -4.56  -32.25  -16.47 (I) 
+ Hagen Danner Tor             12     1   4.500   1.333   11    0    -4.59  -32.47  -16.59 (I) 
+ Naoyuki Uwasawa Bos          18     1   4.500   1.389   16    0    -4.57  -32.35  -16.52 (I) 
+ Cooper Criswell Bos          66     4   4.364   1.273   54    0    -2.64  -15.04  -7.43 (I) 
+ Brendan White Det            22     1   4.500   1.364   23    0    -4.40  -30.75  -15.68 (I) 
+ Trevor Brigden TB            31     2   3.484   1.226   35    0    -3.23  -20.31  -10.20 (I) 
+ Ty Adcock Sea                17     1   4.235   1.294   15    0    -4.44  -31.13  -15.88 (I) 
+ Drew Anderson Det            36     1   5.250   1.722   37    0    -5.25  -38.41  -19.71 (I) 
+ Taylor Dollard Sea           16     1   3.938   1.125   15    0    -4.21  -29.09  -14.81 (I) 
+ Joey Cantillo Cle            41     2   4.390   1.293   40    0    -3.60  -23.65  -11.95 (I) 
+ Wikelman Gonzalez Bos        32     2   5.344   1.531   36    0    -4.45  -31.24  -15.94 (I) 
+ Vinny Nittoli Oak            25     1   3.600   1.240   25    0    -3.94  -26.63  -13.52 (I) 
+ Andrew Wantz LAA             26     1   4.846   1.538   22    2    -4.52  -31.82  -16.25 (I) 
+ Beau Brieske Det             45     3   3.400   1.222   36    3    -2.24  -11.41  -5.52 (I) 
+ Mason Englert Det            22     1   5.727   1.500   19    0    -5.00  -36.17  -18.53 (I) 
+ Zach Jackson Oak             46     2   4.304   1.435   41    6    -2.94  -17.66  -8.81 (I) 
+ John McMillon KC             56     3   4.018   1.446   59    7    -1.93  -8.60  -4.04 (I) 
+ Jared Shuster CWS            46     2   5.870   1.543   36    0    -5.20  -37.93  -19.46 (I) 
+ Carlos Vargas Sea            29     2   4.655   1.552   26    2    -4.12  -28.27  -14.38 (I) 
+ Drew Thorpe CWS             103     4   5.068   1.408  100    0    -3.05  -18.66  -9.33 (I) 
+ Joey Estes Oak               84     4   3.964   1.167   75    0    -1.27  -2.72  -0.96 (I) 
+ Ron Marinaccio NYY           34     2   4.765   1.500   34    0    -4.29  -29.81  -15.19 (I) 
+ David Festa Min              16     1   4.500   1.375   16    0    -4.53  -31.95  -16.31 (I) 
+ Antoine Kelly Tex            21     1   3.857   1.333   21    0    -4.25  -29.44  -14.99 (I) 
+ Luis Guerrero Bos            26     1   4.500   1.538   26    0    -4.64  -32.92  -16.83 (I) 
+ Marc Church Tex              16     1   3.938   1.438   17    0    -4.46  -31.32  -15.98 (I) 
+ Grant Anderson Tex           41     3   3.732   1.293   41    3    -2.44  -13.22  -6.47 (I) 
+ Lucas Luetge Bos             21     1   4.286   1.429   22    0    -4.44  -31.18  -15.91 (I) 
+ Matt Canterino Min           16     1   4.500   1.438   18    0    -4.53  -31.97  -16.33 (I) 
+ Jake Odorizzi TB              9     0   5.000   1.222    8    0    -4.95  -35.73  -18.30 (I) 

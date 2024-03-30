@@ -38,6 +38,8 @@ using namespace std;
 team::team(ifstream &file) 
 {       
         // TODO: assert file nonnull
+        players_drafted = 0;
+        print_reports = 0;
 
         // Default initialization of these member variables
         extra_pos = "P";
@@ -230,7 +232,7 @@ pitcher team::initialize_pitcher(ifstream &file, string first)
         }
 
         pitcher p = pitcher(name, innings_pitched, wins, era, whip, strikeouts, 
-                            value, false);
+                            HOSV, value, HOSV == 0, false);
 
         // says if pitcher is a starting pitcher or a reliever
         if (pos == "SP") {
@@ -393,6 +395,7 @@ void team::print_pitcher_categories()
         cout << left << setw(9)  << setfill(' ') << "ERA";
         cout << left << setw(9)  << setfill(' ') << "WHIP";
         cout << left << setw(6)  << setfill(' ') << "SO";
+        cout << left << setw(6)  << setfill(' ') << "HOSV";
         cout << left << setw(8) << setfill(' ')  << "VAL";
         cout << endl
 << "--------------------------------------------------------------------------\n";
@@ -787,10 +790,11 @@ void team::print_batter_stats(bool start)
                 // prints the average stats of the starters
                 batter("AVERAGE", "NA", ab / count, runs / count, 
                        homeruns / count, rbi / count, sb / count, avg, 
-                       batter_salary).print_stats();
+                       batter_salary / count).print_stats();
         // print the bench hitters' stats
         } else {
                 int count = bench_hitters.size();
+                int sal = 0;
                 for (auto it = bench_hitters.begin(); it != bench_hitters.end(); it++) {
                         ab += it->get_at_bats();
                         runs += it->get_runs();
@@ -798,15 +802,16 @@ void team::print_batter_stats(bool start)
                         rbi += it->get_rbi();
                         sb += it->get_stolen_bases();
                         avg += it->get_average() * it->get_at_bats();
+                        sal += it->get_value();
                 }
                 avg = avg / ab;
                 cout << "######  ";
                 batter("TOTAL", "NA", ab, runs, homeruns, rbi, sb, avg, 
-                               batter_salary).print_stats();
+                               sal).print_stats();
                 cout << "######  ";
                 batter("AVERAGE", "NA", ab / count, runs / count, 
                        homeruns / count, rbi / count, sb / count, avg, 
-                       batter_salary).print_stats();
+                       sal / bench_hitters.size()).print_stats();
         }
 }
 
@@ -825,6 +830,7 @@ void team::print_pitcher_stats(bool start)
         float era = 0.0;
         float whip = 0.0; 
         int strikeouts = 0;
+        int HOSV = 0;
 
         if (start) {
                 int tot = hurlers.size();
@@ -834,32 +840,35 @@ void team::print_pitcher_stats(bool start)
                         era += it->get_era() * it->get_innings();
                         whip += it->get_whip() * it->get_innings();
                         strikeouts += it->get_strikeouts();
+                        HOSV += it->get_HOSV();
                 }
                 era = era / innings_pitched;
                 whip = whip / innings_pitched;
                 cout << "######  ";
                 pitcher("TOTAL", innings_pitched, wins, era, whip, 
-                                strikeouts, pitcher_salary, false).print_stats();
+                                strikeouts, HOSV, pitcher_salary, false, false).print_stats();
                 cout << "######  ";
                 pitcher("AVERAGE", innings_pitched / tot, wins / tot, era, whip, 
-                        strikeouts / tot, pitcher_salary, false).print_stats();
+                        strikeouts / tot, HOSV / tot, pitcher_salary / tot, false, false).print_stats();
         } else {
                 int tot = bench_hurlers.size();
+                int sal = 0;
                 for (auto it = bench_hurlers.begin(); it != bench_hurlers.end(); it++) {
                         innings_pitched += it->get_innings();
                         wins += it->get_wins();
                         era += it->get_era() * it->get_innings();
                         whip += it->get_whip() * it->get_innings();
                         strikeouts += it->get_strikeouts();
+                        sal += it->get_value();
                 }
                 era = era / innings_pitched;
                 whip = whip / innings_pitched;
                 cout << "######  ";
                 pitcher("TOTAL", innings_pitched, wins, era, whip, 
-                                strikeouts, pitcher_salary, false).print_stats();
+                                strikeouts, HOSV, sal, false, false).print_stats();
                 cout << "######  ";
                 pitcher("AVERAGE", innings_pitched / tot, wins / tot, era, whip, 
-                        strikeouts / tot, pitcher_salary, false).print_stats();
+                        strikeouts / tot, HOSV / sal, sal / tot, false, false).print_stats();
         }
 
 }
