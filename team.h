@@ -37,9 +37,6 @@ typedef enum lineup {
 class team 
 {
 public:
-        int players_drafted;
-        int print_reports;
-
         team(ifstream &file);
 
         void print_hitters();

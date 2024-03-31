@@ -17,8 +17,6 @@
 
 using namespace std;
 
-void open_or_die(ifstream &stream, string file_name);
-
 int main(int argc, char *argv[])
 {
         if (argc != 4) {
@@ -49,11 +47,3 @@ int main(int argc, char *argv[])
         return 0;
 }
 
-// Attempts to open and store a file to an ifstream based on its name
-void open_or_die(ifstream &stream, string file_name) {
-        stream.open(file_name);
-        if (not stream.is_open()) {
-                cerr << "Error: could not open file " << file_name << endl;
-                exit(EXIT_FAILURE);
-        }
-}

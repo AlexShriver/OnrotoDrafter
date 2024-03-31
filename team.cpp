@@ -38,10 +38,7 @@ using namespace std;
 team::team(ifstream &file) 
 {       
         // TODO: assert file nonnull
-        players_drafted = 0;
-        print_reports = 0;
-
-        // Default initialization of these member variables
+       // Default initialization of these member variables
         extra_pos = "P";
         num_pitchers = 9;   // the number of pitchers (reliever or starter) that
                             // can be started
@@ -233,13 +230,6 @@ pitcher team::initialize_pitcher(ifstream &file, string first)
 
         pitcher p = pitcher(name, innings_pitched, wins, era, whip, strikeouts, 
                             HOSV, value, HOSV == 0, false);
-
-        // says if pitcher is a starting pitcher or a reliever
-        if (pos == "SP") {
-                p.set_starter(true);
-        } else {
-                p.set_starter(false);
-        }
         return p;
 }
 
@@ -612,7 +602,7 @@ bool team::check_eligibility(batter player, lineup new_pos)
         // converts the new_pos lineup enum to match eligibility field of batter
         if (str_new_pos[0] == 'O') {
                 str_new_pos = "OF";
-        } else if (str_new_pos[0] == 'C') {
+        } else if (str_new_pos == "C1" or str_new_pos == "C2") {
                 str_new_pos = "C";
         }
 

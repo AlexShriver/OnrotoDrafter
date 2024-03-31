@@ -8,7 +8,7 @@
  George Springer  Tor       DH OF        527    92   21   64   14   0.256     3.18  21.49  28.12
  Alex Verdugo  Bos          DH OF        528    70   13   77   10   0.305     3.17  21.48  28.10
  Alex Bregman  Hou          DH 3B        524    84   19   92    6   0.260     2.67  20.12  26.30
- Jorge Polanco  Min         DH 2B        488    71   18   79   13   0.258     2.49  19.66  25.69 (D) 
+ Jorge Polanco  Min         DH 2B        488    71   18   79   13   0.258     2.49  19.66  25.69 (D)
  Harrison Bader  NYY        DH OF        489    57   14   57   28   0.249     2.48  19.62  25.64 (D) 
  Javier Baez  Det           DH SS        554    68   18   74   21   0.236     2.47  19.60  25.62
  Josh Naylor  Cle           1B DH        493    64   18   81    7   0.278     2.17  18.80  24.55

@@ -18,13 +18,17 @@
 
 using namespace std;
 
+void open_or_die(ifstream &stream, string file_name);
+
 void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team);
 
-void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team);
+void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team, ofstream &drafted_players);
 
 void print(batter_database *avail_batters, pitcher_database *avail_pitchers);
 
 void manip_team(team *my_team);
+
+void auto_draft(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team, ofstream &drafted_players);
 
 void print_hitter_categories();
 void print_pitcher_categories();

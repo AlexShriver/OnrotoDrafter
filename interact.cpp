@@ -22,6 +22,15 @@
 
 using namespace std;
 
+// Attempts to open and store a file to an ofstream based on its name
+void open_ofstream(ofstream &stream, string file_name) {
+        stream.open(file_name);
+        if (not stream.is_open()) {
+                cerr << "Error: could not open file " << file_name << endl;
+                exit(EXIT_FAILURE);
+        }
+}
+
 /**********query_loop********
  * Runs a query loop which allows an OnRoto_Drafter user to interact with 
  * available players and their team
@@ -35,6 +44,11 @@ using namespace std;
 void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team)
 {
         // TODO: Assert arguments are nonnull
+
+        // Create the drafted players file
+        ofstream drafted_players;
+        open_ofstream(drafted_players, "drafted_players.txt");
+
         string command = "", sure;
 
         // This is the general loop which will end when the command is to quit
@@ -50,19 +64,22 @@ void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\n";
                 cout << "***   draft player - d   ***   see available - a   "
-                     << "***   manipulate team - t   ***   quit - quit\n";
+                     << "***   manipulate team - t   ***   autodraft - auto   ***   quit - quit\n";
                 
                 cout << "query ---- ";
                 cin >> command;
                 if (command == "d") {
                         // draft a player
-                        draft_loop(avail_batters, avail_pitchers, my_team);
+                        draft_loop(avail_batters, avail_pitchers, my_team, drafted_players);
                 } else if (command == "a") {
                         // print all the available players
                         print(avail_batters, avail_pitchers);
                 } else if (command == "t") {
                         // manipulate the team
                         manip_team(my_team);
+                } else if (command == "auto") {
+                        // automatically drafts the players listed in the file
+                        auto_draft(avail_batters, avail_pitchers, my_team, drafted_players);
                 } else if (command == "quit" or command[0] == 'q') {
                         cout << "\n\nARE YOU SURE??? YOU WILL LOSE ALL PROGRESS: [y/n] ";
                         cin >> sure;
@@ -73,19 +90,22 @@ void query_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                         cout << "unrecognized\n";
                 }
         }
+
+        drafted_players.close();
 }
 
 /**********draft_loop********
  * Runs a query loop giving the user the ability to draft a player to their
  *      team or another team
  * Inputs:
- *      batter_database *avail_batters: a full database of available hitters
+ *      batter_database *avail_batters:   a full database of available hitters
  *      pitcher_database *avail_pitchers: a full database of available pitchers
- *      team *my_team: the user's team
+ *      team *my_team:                    the user's team
+ *      ofstream &drafted_players:        the file to output all drafted players to
  * Return: n/a
  * Expects: nonnull databases and team
  ************************/
-void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team)
+void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers, team *my_team, ofstream &drafted_players)
 {
         // TODO: Assert nonnull arguments
         string hit_pit, draft, pos, first, last, name = "";
@@ -105,7 +125,9 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n"
                      << "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\n";
                 cout << "What is the player's name? ";
-                cin >> first >> last;
+                cin >> first;
+                if (first == "q") { break; }
+                cin >> last;
                 name += first + " " + last;
 
                 cout << "Is a pitcher or hitter being drafted? [p/h] ";
@@ -117,27 +139,22 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                         hurler = avail_pitchers->get_player(name);
                         if (hurler.is_player()) {
                                 avail_pitchers->remove_player(name);
-                        } else { break; }
+                        } else { continue; }
                 } else if (hit_pit == "h") {
                         hitter = avail_batters->get_player(name);
                         if (hitter.is_player()) {
                                 avail_batters->remove_player(name);
-                        } else { break; }
+                        } else { continue; }
                 } else {
                         cout << hit_pit << ": not recognized\n";
-                        break;
-                }
-
-                // report the status to files
-                my_team->players_drafted++;
-                if (my_team->players_drafted % 10 == 0) {
-                    cout << "print time!" << endl;
+                        continue;
                 }
 
                 cout << "Did you draft this player? [y/n] ";
                 cin >> draft;
 
-                if (draft == "y") {         // add the player to the user's team
+                // add the player to the user's team
+                if (draft == "y") {      
                         cout << "How much did you spend? ";
                         cin >> price;
                         if (hit_pit == "h") {  // determine where to play hitter
@@ -152,11 +169,6 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                                 my_team->add_new_batter(hitter, pos);
                         } else {        // determine how to add pitcher to team
                                 hurler.set_value(price);
-                                cout << "Is your pitcher a starter or reliever? [r/s] ";
-                                cin >> pos;
-                                if (pos == "r" || pos[0] == 'r' || pos[0] == 'R') {
-                                        hurler.set_starter(false);
-                                }
                                 my_team->add_new_pitcher(hurler);
                                 cout << "Your pitcher has been added to your team. Here is your new pitching staff: \n";
                                 my_team->print_pitchers();
@@ -172,7 +184,12 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                                         }
                                 }
                         }
+                        drafted_players << hit_pit + " d " << price << " " + pos + " " + name << endl;
+                } else {
+                    // output that the player was drafted
+                    drafted_players << hit_pit + " " + name << endl;
                 }
+
                 cout << "****************************************\n"
                      << "****       Player Drafted           ****\n"
                      << "****************************************\n\n\n\n";
@@ -448,4 +465,104 @@ void print_pitcher_categories()
         cout << left << setw(8) << setfill(' ')  << "VAL";
         cout << endl
 << "--------------------------------------------------------------------------\n";
+}
+
+// Attempts to open and store a file to an ifstream based on its name
+void open_or_die(ifstream &stream, string file_name) {
+        stream.open(file_name);
+        if (not stream.is_open()) {
+                cerr << "Error: could not open file " << file_name << endl;
+                exit(EXIT_FAILURE);
+        }
+}
+
+/**********auto_draft********
+ * Automatically drafts the players from a list to set the state of the draft.
+ *      This is useful if the program ends unexpectedly or I miss a few players
+ * Inputs:
+ *      batter_database *avail_batters:   a full database of available hitters
+ *      pitcher_database *avail_pitchers: a full database of available pitchers
+ *      team *my_team:                    the user's team
+ *      ofstream &drafted_players:        the file to output all drafted players to
+ * Return: n/a
+ * Expects: nonnull team
+ ************************/
+void auto_draft(batter_database *avail_batters, pitcher_database *avail_pitchers, 
+                team *my_team, ofstream &drafted_players) {
+        cout << "******************************************\n"
+             << "****            AUTODRAFTER           ****\n"
+             << "******************************************\n\n";
+
+        cout << "Please provide the filename with the players to draft below." << endl
+             << "WARNING: do not name the file \"drafted_players.txt\". You must rename the file first.\n\n"
+             << "filename: ";
+
+        // Open the file
+        string file_name;
+        cin >> file_name;
+        ifstream file;
+        open_or_die(file, file_name);
+
+        // important variables
+        pitcher hurler;
+        batter hitter;
+        string hit_pit, first, last, name, pos;
+        int sal;
+        bool mine = false;
+
+        // draft loop
+        while (true) {
+                hit_pit = "";
+                file >> hit_pit >> first;
+                if (first == "d") { // the player was drafted to my team
+                        file >> sal >> pos >> first >> last;
+                        name = first + " " + last;
+                        mine = true;
+                } else {
+                        file >> last;
+                        name = first + " " + last;
+                        mine = false;
+                }
+
+                // Draft the player
+                if (hit_pit == "p") {
+                        hurler = avail_pitchers->get_player(name);
+                        if (hurler.is_player()) {
+                                avail_pitchers->remove_player(name);
+                        } else { continue; }
+                } else if (hit_pit == "h") {
+                        hitter = avail_batters->get_player(name);
+                        if (hitter.is_player()) {
+                                avail_batters->remove_player(name);
+                        } else { continue; }
+                } else {
+                        if (file.eof()) { break; }
+                        cout << hit_pit << ": not recognized, so " << name 
+                            << " was not drafted." << endl; 
+                        continue;
+                }
+
+                // add the player to the user's team
+                if (mine) {    
+                        if (hit_pit == "h") {  // determine where to play hitter
+                                hitter.set_value(sal);
+                                my_team->add_new_batter(hitter, pos);
+                        } else {        // determine how to add pitcher to team
+                                hurler.set_value(sal);
+                                my_team->add_new_pitcher(hurler);
+                                if (pos == "b") { // bench him
+                                        my_team->bench_player(name, false);
+                                } else if (pos == "s") {
+                                        my_team->make_pitcher_starter(name);
+                                }
+                        }
+                        drafted_players << hit_pit + " d " << sal << " " + pos + " " + name << endl;
+                } else {
+                        // output that the player was drafted
+                        drafted_players << hit_pit + " " + name << endl;
+                }   
+
+                if (file.eof()) { break; }
+        }
+        file.close();
 }
