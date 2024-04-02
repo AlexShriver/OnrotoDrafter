@@ -128,7 +128,7 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                 cin >> first;
                 if (first == "q") { break; }
                 cin >> last;
-                name += first + " " + last;
+                name = first + " " + last;
 
                 cout << "Is a pitcher or hitter being drafted? [p/h] ";
                 cin >> hit_pit;
@@ -203,7 +203,6 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                 } else if (name == "q") {
                         break;
                 }
-                name = "";
         }
 }
 
