@@ -266,3 +266,49 @@ void pitcher_database::print_values()
                 it->print_stats();
         }
 }
+
+/**********check_similar_players********
+ * Checks for players who have similar names to the user's input. Does so by 
+ *      comparing the first 3 letters of the input first and last names against
+ *      the database
+ * Inputs:
+ *      string first: the user's inputted first name
+ *      string last:  the user's inputted last name
+ * Return: n/a 
+ ************************/
+void pitcher_database::check_similar_players(string first, string last) 
+{
+        // get the reference lengths and substrings
+        int first_len = 3;
+        if (first_len > first.size()) { first_len = first.size(); }
+
+        int last_len = 3;
+        if (last_len > last.size()) { last_len = last.size(); }
+
+        first = first.substr(0, first_len);
+        last = last.substr(0, last_len);
+
+        cout << endl << "Did you mean: " << endl;
+        // loop through the list and suggest names
+        string r_name, r_first, r_last;
+        int split;
+        for (auto it = data.begin(); it != data.end(); it++) {
+                r_name = it->first;
+                
+                // get the reference player's first and last name
+                split = 0;
+                for (int i = 0; (i < r_name.size() and split == 0); i++) {
+                        if (r_name[i] == ' ') { split = i; }
+                }
+                r_first = r_name.substr(0, first_len); 
+                r_last = r_name.substr(split + 1, last_len);
+
+                // ensure enough letters to find a match
+                if (split >= first_len and (r_name.size() - (split + 1) >= last_len)) {
+                        if (r_first == first or r_last == last) {
+                                cout << r_name << endl;
+                        }
+                }
+        }
+        cout << endl;
+}

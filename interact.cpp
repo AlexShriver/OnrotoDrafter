@@ -139,12 +139,18 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                         hurler = avail_pitchers->get_player(name);
                         if (hurler.is_player()) {
                                 avail_pitchers->remove_player(name);
-                        } else { continue; }
+                        } else { 
+                            avail_pitchers->check_similar_players(first, last);
+                            continue; 
+                        }
                 } else if (hit_pit == "h") {
                         hitter = avail_batters->get_player(name);
                         if (hitter.is_player()) {
                                 avail_batters->remove_player(name);
-                        } else { continue; }
+                        } else { 
+                            avail_batters->check_similar_players(first, last);
+                            continue; 
+                        }
                 } else {
                         cout << hit_pit << ": not recognized\n";
                         continue;

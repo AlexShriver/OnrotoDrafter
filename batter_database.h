@@ -41,8 +41,7 @@ public:
         void print_averages();
         void print_values();
 
-        void change_value(int new_val);
-
+        void check_similar_players(string first, string last);
 
 private:
 

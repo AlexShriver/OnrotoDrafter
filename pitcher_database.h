@@ -39,6 +39,8 @@ public:
         void print_strikeouts();
         void print_values();
 
+        void check_similar_players(string first, string last);
+
 private:
         pitcher initialize_pitcher(ifstream &file, string first);
 
