@@ -140,16 +140,16 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                         if (hurler.is_player()) {
                                 avail_pitchers->remove_player(name);
                         } else { 
-                            avail_pitchers->check_similar_players(first, last);
-                            continue; 
+                                avail_pitchers->check_similar_players(first, last);
+                                continue; 
                         }
                 } else if (hit_pit == "h") {
                         hitter = avail_batters->get_player(name);
                         if (hitter.is_player()) {
                                 avail_batters->remove_player(name);
                         } else { 
-                            avail_batters->check_similar_players(first, last);
-                            continue; 
+                                avail_batters->check_similar_players(first, last);
+                                continue; 
                         }
                 } else {
                         cout << hit_pit << ": not recognized\n";
@@ -192,8 +192,8 @@ void draft_loop(batter_database *avail_batters, pitcher_database *avail_pitchers
                         }
                         drafted_players << hit_pit + " d " << price << " " + pos + " " + name << endl;
                 } else {
-                    // output that the player was drafted
-                    drafted_players << hit_pit + " " + name << endl;
+                        // output that the player was drafted
+                        drafted_players << hit_pit + " " + name << endl;
                 }
 
                 cout << "****************************************\n"
@@ -265,7 +265,7 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                         cout << "What stat would you like to sort by?\n";
                         // for pitchers
                         if (pit_hit == "p") {
-                                cout << "Options: [ip, w, era, whip, so] (Please type the entire stat lower case)$\n";
+                                cout << "Options: [ip, w, era, whip, hosv, so, $] (Please type the entire stat lower case)\n";
                                 cout << "stat: ";
                                 cin >> stat;
                                 // TODO: integrate tolower() to accept upper and lower case spellings of the options
@@ -279,6 +279,8 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                                         avail_pitchers->print_eras();
                                 } else if (stat == "whip") {
                                         avail_pitchers->print_whips();
+                                } else if (stat == "hosv") {
+                                        avail_pitchers->print_HOSV();
                                 } else if (stat == "so") {
                                         avail_pitchers->print_strikeouts();
                                 } else if (stat == "$") {
@@ -291,32 +293,15 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                                 cout << endl << endl;
                         // for hitters
                         } else if (pit_hit == "h") {
-                                cout << "options: [ab, r, hr, rbi, sb, avg] (Please type the entire stat lower case)$\n";
+                                cout << "options: [ab, r, hr, rbi, sb, avg, $] (Please type the entire stat lower case)\n";
                                 cout << "stat: ";
                                 cin >> stat;
+                                if (stat[0] == 'q') { break; }
                                 // TODO: integrate tolower() to accept upper and lower case spellings of the options
                                 cout << endl << endl;
+
                                 print_hitter_categories(); // header of the stats before list of players
-                                if (stat == "ab") {
-                                        avail_batters->print_at_bats();
-                                } else if (stat == "r") {
-                                        avail_batters->print_runs();
-                                } else if (stat == "hr") {
-                                        avail_batters->print_homeruns();
-                                } else if (stat == "rbi") {
-                                        avail_batters->print_rbis();
-                                } else if (stat == "sb") {
-                                        avail_batters->print_stolen_bases();
-                                } else if (stat == "avg") {
-                                        avail_batters->print_averages();
-                                } else if (stat == "$") {
-                                        avail_batters->print_values();
-                                } else if (stat[0] == 'q') {
-                                        break;
-                                } else {
-                                        cout << "unrecognized: " << stat << endl;
-                                }
-                                cout << endl << endl;
+                                avail_batters->print_database(stat);
                         }
                 } else if (filter == "po") {  // filter by position
                         if (pit_hit == "p") {
@@ -326,9 +311,13 @@ void print(batter_database *avail_batters, pitcher_database *avail_pitchers)
                                 cout << "[C, 1B, 2B, SS, 3B, CI, MI, OF]\n";
                                 cout << "position: ";
                                 cin >> pos;
-                                cout << endl << endl;
+                                cout << endl;
+                                cout << "What stat would you like to filter the " + pos + " position by?" << endl;
+                                cout << "options: [ab, r, hr, rbi, sb, avg, $] (Please type the entire stat lower case)" << endl;
+                                cout << "stat: ";
+                                cin >> stat;
                                 print_hitter_categories();
-                                avail_batters->print_pos(pos);
+                                avail_batters->print_pos(pos, stat);
                                 // TODO: allow user to filter by stat within positions
                         }
                         cout << endl << endl;

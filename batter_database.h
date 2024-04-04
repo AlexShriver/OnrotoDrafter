@@ -31,21 +31,18 @@ public:
         void remove_player(string player);
 
         void print_map();
-        void print_pos(string pos);
         void print_player(string name);
-        void print_at_bats();
-        void print_runs();
-        void print_homeruns();
-        void print_rbis();
-        void print_stolen_bases();
-        void print_averages();
-        void print_values();
+        void print_pos(string pos, string stat);
+        void print_database(string stat);
 
         void check_similar_players(string first, string last);
 
 private:
 
         batter initialize_batter(ifstream &file, string first);
+
+        void print_by_stat(list <batter> lst, string stat);
+        void print_players(list <batter> lst);
 
         list <batter> listify();
         

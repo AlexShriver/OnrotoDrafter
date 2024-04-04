@@ -200,67 +200,10 @@ static bool compare_at_bats(batter &a, batter &b)
         return a.get_at_bats() > b.get_at_bats();
 }
 
-// prints the database based on at_bats
-void batter_database::print_at_bats() 
-{
-        list <batter> sorted_ab = listify();
-        sorted_ab.sort(compare_at_bats);
-        for (auto it = sorted_ab.begin(); it != sorted_ab.end(); it++) {
-                it->print_stats();
-        }
-}
-
-/**********print_pos********
- * prints a list of the players in the database who play an argued position
- * Inputs:
- *      string pos: The desired position
- * Return: n/a
- * Expects: a valid position
- ************************/
-void batter_database::print_pos(string pos) 
-{
-        list <batter> sorted_ab = listify();
-        sorted_ab.sort(compare_at_bats); // all players sorted by atbats
-        for (auto it = sorted_ab.begin(); it != sorted_ab.end(); it++) {
-
-                stringstream ss(it->get_eligibility());
-                string player_pos;
-                // check if each of their positions is the desired one
-                while (ss >> player_pos) {
-                        // MI includes SS and 2B
-                        if (pos == "MI") {
-                                if (player_pos == "SS" or player_pos == "2B") {
-                                        it->print_stats();
-                                }
-                        // CI includes 1B and 3B
-                        } else if (pos == "CI") {
-                                if (player_pos == "1B" or player_pos == "3B") {
-                                        it->print_stats();
-                                }
-                        // if not 1B or 3B, just check the position normally
-                        } else {
-                                if (player_pos == pos) {
-                                        it->print_stats();
-                                }
-                        }       
-                }
-        }
-}
-
 // comparison function for runs
 static bool compare_runs(batter &a, batter &b)
 {
         return a.get_runs() > b.get_runs();
-}
-
-// prints the database ordered by their runs
-void batter_database::print_runs() 
-{
-        list <batter> sorted_runs = listify();
-        sorted_runs.sort(compare_runs);
-        for (auto it = sorted_runs.begin(); it != sorted_runs.end(); it++) {
-                it->print_stats();
-        }
 }
 
 // comparison function for homeruns
@@ -269,30 +212,10 @@ static bool compare_homeruns(batter &a, batter &b)
         return a.get_homeruns() > b.get_homeruns();
 }
 
-// prints the database ordered by homeruns
-void batter_database::print_homeruns() 
-{
-        list <batter> sorted_homeruns = listify();
-        sorted_homeruns.sort(compare_homeruns);
-        for (auto it = sorted_homeruns.begin(); it != sorted_homeruns.end(); it++) {
-                it->print_stats();
-        }
-}
-
 // comparison function for rbis
 static bool compare_rbis(batter &a, batter &b)
 {
         return a.get_rbi() > b.get_rbi();
-}
-
-// prints the database ordered by rbis
-void batter_database::print_rbis() 
-{
-        list <batter> sorted_rbi = listify();
-        sorted_rbi.sort(compare_rbis);
-        for (auto it = sorted_rbi.begin(); it != sorted_rbi.end(); it++) {
-                it->print_stats();
-        }
 }
 
 // comparison function for stolen bases
@@ -301,30 +224,10 @@ static bool compare_sb(batter &a, batter &b)
         return a.get_stolen_bases() > b.get_stolen_bases();
 }
 
-// prints the database ordered by stolen bases
-void batter_database::print_stolen_bases() 
-{
-        list <batter> sorted_sb = listify();
-        sorted_sb.sort(compare_sb);
-        for (auto it = sorted_sb.begin(); it != sorted_sb.end(); it++) {
-                it->print_stats();
-        }
-}
-
 // comparison function for averages
 static bool compare_averages(batter &a, batter &b)
 {
         return a.get_average() > b.get_average();
-}
-
-// prints the database ordered by averages
-void batter_database::print_averages() 
-{
-        list <batter> sorted_avg = listify();
-        sorted_avg.sort(compare_averages);
-        for (auto it = sorted_avg.begin(); it != sorted_avg.end(); it++) {
-                it->print_stats();
-        }
 }
 
 // comparison function for estimated monetary value 
@@ -333,12 +236,103 @@ static bool compare_values(batter &a, batter &b)
         return a.get_value() > b.get_value();
 }
 
-// prints the database ordered by player estimated values. 
-void batter_database::print_values() 
+/**********print_by_stat********
+ * prints all batters in the argued list sorted by the argued stat
+ * Inputs:
+ *      list <batter> lst: the players to print
+ *      string stat: The desired stat
+ * Return: n/a
+ * Expects: a valid stat and a nonnull list
+ ************************/
+void batter_database::print_by_stat(list <batter> lst, string stat) {
+        if (stat == "ab") {
+                lst.sort(compare_at_bats);
+                print_players(lst);
+        } else if (stat == "r") {
+                lst.sort(compare_runs);
+                print_players(lst);
+        } else if (stat == "hr") {
+                lst.sort(compare_homeruns);
+                print_players(lst);
+        } else if (stat == "rbi") {
+                lst.sort(compare_rbis);
+                print_players(lst);
+        } else if (stat == "sb") {
+                lst.sort(compare_sb);
+                print_players(lst);
+        } else if (stat == "avg") {
+                lst.sort(compare_averages);
+                print_players(lst);
+        } else if (stat == "$") {
+                lst.sort(compare_values);
+                print_players(lst);
+        } else {
+                cout << "unrecognized: " << stat << endl;
+        }
+        cout << endl << endl;
+}
+
+/**********print_database********
+ * prints all batters in the database sorted by a stat
+ * Inputs:
+ *      string stat: The desired stat
+ * Return: n/a
+ * Expects: a valid stat
+ ************************/
+void batter_database::print_database(string stat) 
 {
-        list <batter> sorted_values = listify();
-        sorted_values.sort(compare_values);
-        for (auto it = sorted_values.begin(); it != sorted_values.end(); it++) {
+        print_by_stat(listify(), stat);
+        
+}
+
+/**********print_pos********
+ * prints a list of the players in the database who play an argued position sorted
+ *      by an argued stat
+ * Inputs:
+ *      string pos: The desired position
+ *      string stat: The desired stat
+ * Return: n/a
+ * Expects: a valid position and stat
+ ************************/
+void batter_database::print_pos(string pos, string stat) 
+{
+        list <batter> lst;
+        for (auto it = data.begin(); it != data.end(); it++) {
+                stringstream ss(it->second.get_eligibility());
+                string player_pos;
+                // check if each of their positions is the desired one
+                while (ss >> player_pos) {
+                        // MI includes SS and 2B
+                        if (pos == "MI") {
+                                if (player_pos == "SS" or player_pos == "2B") {
+                                        lst.push_back(it->second);
+                                }
+                        // CI includes 1B and 3B
+                        } else if (pos == "CI") {
+                                if (player_pos == "1B" or player_pos == "3B") {
+                                        lst.push_back(it->second);
+                                }
+                        // if not 1B or 3B, just check the position normally
+                        } else {
+                                if (player_pos == pos) {
+                                        lst.push_back(it->second);
+                                }
+                        }       
+                }
+        }
+        print_by_stat(lst, stat);
+}
+
+/**********print_players********
+ * prints all batters in the argued list of players
+ * Inputs:
+ *      list <batter> lst: the list of batters to print
+ * Return: n/a
+ * Expects: a nonnull list
+ ************************/
+void batter_database::print_players(list <batter> lst)
+{
+        for (auto it = lst.begin(); it != lst.end(); it++) {
                 it->print_stats();
         }
 }

@@ -37,6 +37,7 @@ public:
         void print_eras();
         void print_whips();
         void print_strikeouts();
+        void print_HOSV();
         void print_values();
 
         void check_similar_players(string first, string last);

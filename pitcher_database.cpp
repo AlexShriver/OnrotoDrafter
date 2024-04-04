@@ -235,6 +235,22 @@ void pitcher_database::print_whips()
         }
 }
 
+// comparison function for holds and saves
+static bool compare_HOSV(pitcher &a, pitcher &b)
+{
+        return a.get_HOSV() > b.get_HOSV();
+}
+
+// prints the database ordered by holds and saves
+void pitcher_database::print_HOSV()
+{
+        list <pitcher> sorted_HOSV = listify();
+        sorted_HOSV.sort(compare_HOSV);
+        for (auto it = sorted_HOSV.begin(); it != sorted_HOSV.end(); it++) {
+                it->print_stats();
+        }
+}
+
 // comparison function for strikeouts
 static bool compare_strikeouts(pitcher &a, pitcher &b)
 {
